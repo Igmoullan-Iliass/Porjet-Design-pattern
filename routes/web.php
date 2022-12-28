@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/acceuille', function () {
+    return view('layoutAdmin.navbar');
+});
 
 // Route::get('/', function () {
 //     return '<h1>hh</h1>';
