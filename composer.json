@@ -58,7 +58,9 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
-        }
+        },
+        "disable-tls": true,
+        "secure-http": false
     },
     "minimum-stability": "dev",
     "prefer-stable": true
