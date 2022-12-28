@@ -18,5 +18,5 @@ Route::get('/gg', function () {
 });
 
 Route::get('/', function () {
-    return '<h1>hh</h1>';
+    return view('layoutAdmin.navbar');
 });
