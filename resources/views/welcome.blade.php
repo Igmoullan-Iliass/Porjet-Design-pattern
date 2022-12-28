@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>HOME </title>
+    <style>
+      .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
+
+    </style>
 
 </head>
 
@@ -42,7 +46,7 @@
     <div class="container ">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <h2> Rendez-vous</h2>
+      <h2 class="shadow-blue" style=" font-family: 'Brush Script MT', cursive;font-size: 40px; "> Rendez-vous</h2>
         </a>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -66,7 +70,7 @@
       <!-- main 1 -->
       <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">Rendez-vous</h1>
+          <h1 class="display-5 fw-bold text-white " >Rendez-vous</h1>
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">logiciel de gestion et prise de rendez-vous en ligne .</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -86,11 +90,11 @@
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-light">
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="email" class="form-control rounded-pill" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
               </div>
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <input type="password" class="form-control rounded-pill" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
               </div>
               <div class="checkbox mb-3">
