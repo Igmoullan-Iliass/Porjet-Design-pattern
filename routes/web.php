@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('login');
+// Route::get('/login', function () {
+//     return view('login');
 Route::get('/gg', function () {
     return '<h1>hh</h1>';
 });
