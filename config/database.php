@@ -48,13 +48,11 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-<<<<<<< Updated upstream
-            // 'database' => env('DB_DATABASE', 'forge'),
-            'database' => env('DB_DATABASE', 'dp_project'),
+            'database' => env('DB_DATABASE', 'Rendez-vous'),
+<<<<<<< HEAD
 
 =======
-            'database' => env('DB_DATABASE', 'Rendez-vous'),
->>>>>>> Stashed changes
+>>>>>>> 362a8d91253fecb935434a7a4006a2be47b27bd1
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
