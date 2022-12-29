@@ -74,7 +74,8 @@
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">logiciel de gestion et prise de rendez-vous en ligne .</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill">Prend un Render-vous</button>
+              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
+              @yield ('content')
               <button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button>
             </div>
           </div>
