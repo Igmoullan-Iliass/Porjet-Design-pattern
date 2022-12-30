@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 //hh
 // Route::get('/login', function () {
 //     return view('login');
+
+//test
+Route::get('/1', function () {
+    return view('admin.sidebar');
+});
+////
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
