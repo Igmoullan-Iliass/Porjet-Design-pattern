@@ -20,6 +20,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/1', function () {
     return view('admin.sidebar');
 });
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+Route::get('/techniciens', function () {
+    return view('admin.techniciens');
+});
+
 ////
 
 
