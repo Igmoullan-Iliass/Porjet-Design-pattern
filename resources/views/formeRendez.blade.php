@@ -1,4 +1,4 @@
-@extends('welcome')
+{{-- @extends('welcome') --}}
 
 @section ('content')
  <!-- Button trigger modal -->
@@ -67,7 +67,7 @@
       </div>
     </div>
   </div>
-
+{{-- end mode  --}}
 
 
 @endsection
