@@ -116,7 +116,7 @@
               </div>
 
               {{-- fin pour fomr  --}}
-              <button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button>
+              <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
             </div>
           </div>
         </div>
@@ -125,8 +125,8 @@
       <div class="container col-xl-10 col-xxl-8 px-4 py-5 " id="Sign-up">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Sign-up form</h1>
-            <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Make an Appointment </h1>
+             <img src="/images\img1.gif" alt="calender"  width="" height="auto" class="col-8 fs-4">
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-light">
@@ -153,7 +153,18 @@
     </main>
 
     <!-- footer  -->
-    <footer></footer>
+    <div class="container-fluid bg-dark ">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+        </footer>
+      </div>
 
 
 
