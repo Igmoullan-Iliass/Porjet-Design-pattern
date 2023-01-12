@@ -12,7 +12,7 @@
 <!-- end navbar-->
 <div id="sidebar" class="container-fluid"> 
     <div id="content"class="row">
-        <div class="col-md-3">
+        <div class="col-md-1">
 @include('admin.sidebar')
     </div>
     <div class="col">
