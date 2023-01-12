@@ -51,9 +51,9 @@
       <!-- main 1 -->
       <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-white " >Rendez-vous</h1>
+          <h1 class="display-5 fw-bold text-white shadow-blue " style=" font-family: 'Brush Script MT', cursive; " >Rendez-vous</h1>
           <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4">logiciel de gestion et prise de rendez-vous en ligne .</p>
+            <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
 
@@ -62,7 +62,7 @@
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title text-center" id="staticBackdropLabel">Pris de rendez-vous </h5>
+                      <h5 class="modal-title " id="staticBackdropLabel">Pris de rendez-vous </h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -102,6 +102,11 @@
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
+                                  <option>09:30</option>
+                                  <option>09:45</option>
+                                  <option>10:00</option>
+                                  <option>10:15</option>
+                                  <option>10:30</option>
                                 </select>
                               </div>
 
