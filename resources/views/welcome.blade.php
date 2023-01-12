@@ -62,60 +62,54 @@
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Pris de rendez-vous </h5>
+                      <h5 class="modal-title text-center" id="staticBackdropLabel">Pris de rendez-vous </h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="row g-3">
-                            <div class="col-md-4">
+                        <form class="row g-3 rounded-pill" >
+                            <div class="col-sm-4">
                                 <label for="inputPassword4" class="form-label">username</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control rounded-pill" id="inputPassword4">
                               </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                               <label for="inputEmail4" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="inputEmail4">
+                              <input type="email" class="form-control rounded-pill" id="inputEmail4">
                             </div>
 
 
-                            <div class="col-4">
+                            <div class="col-sm-4">
                               <label for="inputAddress" class="form-label">tel</label>
-                              <input type="text" class="form-control" id="inputAddress" placeholder="+212 6...">
+                              <input type="text" class="form-control rounded-pill" id="inputAddress" placeholder="+212 6...">
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-sm-4">
+                                <label for="inputState" class="form-label">city</label>
+                                <select id="inputState" class="form-select rounded-pill">
+                                  <option selected>Choose...</option>
+                                  <option>Marrakech</option>
+                                  <option>casa</option>
+                                </select>
+                              </div>
+
+                            <div class="col-sm-4">
                               <label for="inputCity" class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control" id="inputCity">
+                              <input type="date" class="form-control rounded-pill" id="inputCity">
                             </div>
-                            <div class="col-md-4">
-                              <label for="inputState" class="form-label">city</label>
-                              <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>Marrakech</option>
-                                <option>casa</option>
-                              </select>
-                            </div>
-                            <div class="col-md-4">
+
+                            <div class="col-sm-4">
                                 <label for="inputState" class="form-label">temps</label>
-                                <select id="inputState" class="form-select">
+                                <select id="inputState" class="form-select rounded-pill">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
                                 </select>
                               </div>
-                            {{-- <div class="col-12">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                  Check me out
-                                </label>
-                              </div>
-                            </div> --}}
 
                           </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                    <div class="modal-footer col-md-12 text-center ">
+                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                      <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button>
                     </div>
                   </div>
                 </div>
