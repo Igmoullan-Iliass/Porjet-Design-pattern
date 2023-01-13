@@ -66,25 +66,26 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="row g-3 rounded-pill" >
-                            <div class="col-sm-4">
-                                <label for="inputPassword4" class="form-label">username</label>
-                                <input type="text" class="form-control rounded-pill" id="inputPassword4">
+                        <form class="row g-3 rounded-pill" action="{{url('rv')}}" method="POST">
+                        {{csrf_field()}}    
+                        <div class="col-sm-4">
+                                <label  class="form-label">username</label>
+                                <input type="text" class="form-control rounded-pill" name="username">
                               </div>
                             <div class="col-sm-4">
-                              <label for="inputEmail4" class="form-label">Email</label>
-                              <input type="email" class="form-control rounded-pill" id="inputEmail4">
+                              <label  class="form-label">Email</label>
+                              <input type="email" class="form-control rounded-pill" name="email">
                             </div>
 
 
                             <div class="col-sm-4">
-                              <label for="inputAddress" class="form-label">tel</label>
-                              <input type="text" class="form-control rounded-pill" id="inputAddress" placeholder="+212 6...">
+                              <label  class="form-label">tel</label>
+                              <input type="text" class="form-control rounded-pill" name="tel" placeholder="+212 6...">
                             </div>
 
                             <div class="col-sm-4">
-                                <label for="inputState" class="form-label">city</label>
-                                <select id="inputState" class="form-select rounded-pill">
+                                <label class="form-label">city</label>
+                                <select name="city" class="form-select rounded-pill">
                                   <option selected>Choose...</option>
                                   <option>Marrakech</option>
                                   <option>casa</option>
@@ -92,13 +93,13 @@
                               </div>
 
                             <div class="col-sm-4">
-                              <label for="inputCity" class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control rounded-pill" id="inputCity">
+                              <label  class="form-label">date de rendez vous </label>
+                              <input type="date" class="form-control rounded-pill" name="daterv">
                             </div>
 
                             <div class="col-sm-4">
-                                <label for="inputState" class="form-label">temps</label>
-                                <select id="inputState" class="form-select rounded-pill">
+                                <label class="form-label">temps</label>
+                                <select name="time" class="form-select rounded-pill">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
@@ -109,7 +110,7 @@
                                   <option>10:30</option>
                                 </select>
                               </div>
-
+                              <input type="submit" class="btn btn-primary rounded-pill" value="Prendre le rendez vous">
                           </form>
                     </div>
                     <div class="modal-footer col-md-12 text-center ">

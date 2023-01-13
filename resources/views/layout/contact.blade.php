@@ -1,0 +1,9 @@
+@extends('layout.master')
+@section('content')
+<h1>f</h1>
+fclosef
+fclosef
+fclosef
+fclosef
+fcloseff
+@endsection
