@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StaticController;
-
-
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,20 +25,17 @@ Route::get('/responsable/dashboard',[StaticController::class,'responsabledashboa
 
 
 
-
-Route::get('/t', function () {
-    return view('test');
-});
-
- Route::get('/login', function () {
+ /*Route::get('/login', function () {
      return view('login');
-});
-
+});*/
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/interface', function () {
+    return view('interface');
+});
 
-Route::get('/rdv', function () {
+/*Route::get('/rdv', function () {
     return view('formeRendez');
 });
 Route::get('/register', function () {
@@ -51,5 +46,10 @@ Route::get('/forgot', function () {
 });
 Route::get('/reset', function () {
     return view('reset');
-});
-
+});*/
+//les routes
+Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
+Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
+Route::get('rv/{id}/edit', [App\Http\Controllers\RendezController::class, 'edit']);
+Route::put('rv/{id}', [App\Http\Controllers\RendezController::class, 'update']);
+Route::delete('rv/{id}', [App\Http\Controllers\RendezController::class, 'destroy']);

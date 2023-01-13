@@ -22,4 +22,24 @@ class RendezController extends Controller
      $rv->save();
      return redirect('rv');
     }
+    public function edit($id){
+      $rv=Rendv::find($id);
+      return view('edit',['rv'=>$rv]);
+    }
+    public function update(Request $request,$id){
+        $rv=Rendv::find($id);
+        $rv->date=$request->input('daterv');
+        $rv->time=$request->input('time');
+        $rv->username=$request->input('username');
+        $rv->telephone=$request->input('tel');
+        $rv->email=$request->input('email');
+        $rv->ville=$request->input('city');
+        $rv->save();
+     return redirect('rv');
+    }
+    public function destroy(Request $request,$id){
+        $rv=Rendv::find($id);
+        $rv->delete();
+        return redirect('rv');
+           }
 }
