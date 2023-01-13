@@ -33,10 +33,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="{{route('dashboard')}}">Dashboard</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a href="{{route('techniciens')}}">Shortcuts</a>
                 </li>
                 <li>
                     <a href="#">Overview</a>
