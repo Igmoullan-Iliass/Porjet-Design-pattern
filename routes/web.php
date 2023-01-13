@@ -19,7 +19,7 @@ from saif
 */ 
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
-Route::get('/admin/accueil',[StaticController::class,'admin'])->name('admin');
+Route::get('/admin/accueil',[StaticController::class,'dashboard'])->name('dashboard');
 Route::get('/dashboard',[StaticController::class,'dashboard'])->name('dashboard'); 
 Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
 
