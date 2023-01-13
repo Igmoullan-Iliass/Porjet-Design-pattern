@@ -11,17 +11,14 @@
 @include('admin.navbar')
 <!-- end navbar-->
 <div id="sidebar" class="container-fluid"> 
-    <div id="content" class="row mt-3">
-        <div class="col-md-1">
+    <div id="content"class="row">
+        <div class="col-md-3">
 @include('admin.sidebar')
     </div>
-    <div class="col" >
-        
-        @yield('content')
-
+    <div class="col">
+@include('admin.dashboard')
     </div>
-    
-    
+    </div>
 
 </div>
 
