@@ -51,9 +51,9 @@
       <!-- main 1 -->
       <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-white " >Rendez-vous</h1>
+          <h1 class="display-5 fw-bold text-white shadow-blue " style=" font-family: 'Brush Script MT', cursive; " >Rendez-vous</h1>
           <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4">logiciel de gestion et prise de rendez-vous en ligne .</p>
+            <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
 
@@ -62,67 +62,66 @@
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Pris de rendez-vous </h5>
+                      <h5 class="modal-title " id="staticBackdropLabel">Pris de rendez-vous </h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form class="row g-3">
-                            <div class="col-md-4">
+                        <form class="row g-3 rounded-pill" >
+                            <div class="col-sm-4">
                                 <label for="inputPassword4" class="form-label">username</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control rounded-pill" id="inputPassword4">
                               </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                               <label for="inputEmail4" class="form-label">Email</label>
-                              <input type="email" class="form-control" id="inputEmail4">
+                              <input type="email" class="form-control rounded-pill" id="inputEmail4">
                             </div>
 
 
-                            <div class="col-4">
+                            <div class="col-sm-4">
                               <label for="inputAddress" class="form-label">tel</label>
-                              <input type="text" class="form-control" id="inputAddress" placeholder="+212 6...">
+                              <input type="text" class="form-control rounded-pill" id="inputAddress" placeholder="+212 6...">
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-sm-4">
+                                <label for="inputState" class="form-label">city</label>
+                                <select id="inputState" class="form-select rounded-pill">
+                                  <option selected>Choose...</option>
+                                  <option>Marrakech</option>
+                                  <option>casa</option>
+                                </select>
+                              </div>
+
+                            <div class="col-sm-4">
                               <label for="inputCity" class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control" id="inputCity">
+                              <input type="date" class="form-control rounded-pill" id="inputCity">
                             </div>
-                            <div class="col-md-4">
-                              <label for="inputState" class="form-label">city</label>
-                              <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>Marrakech</option>
-                                <option>casa</option>
-                              </select>
-                            </div>
-                            <div class="col-md-4">
+
+                            <div class="col-sm-4">
                                 <label for="inputState" class="form-label">temps</label>
-                                <select id="inputState" class="form-select">
+                                <select id="inputState" class="form-select rounded-pill">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
+                                  <option>09:30</option>
+                                  <option>09:45</option>
+                                  <option>10:00</option>
+                                  <option>10:15</option>
+                                  <option>10:30</option>
                                 </select>
                               </div>
-                            {{-- <div class="col-12">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                  Check me out
-                                </label>
-                              </div>
-                            </div> --}}
 
                           </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Understood</button>
+                    <div class="modal-footer col-md-12 text-center ">
+                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                      <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button>
                     </div>
                   </div>
                 </div>
               </div>
 
               {{-- fin pour fomr  --}}
-              <button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button>
+              <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
             </div>
           </div>
         </div>
@@ -131,8 +130,8 @@
       <div class="container col-xl-10 col-xxl-8 px-4 py-5 " id="Sign-up">
         <div class="row align-items-center g-lg-5 py-5">
           <div class="col-lg-7 text-center text-lg-start">
-            <h1 class="display-4 fw-bold lh-1 mb-3">Sign-up form</h1>
-            <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+            <h1 class="display-4 fw-bold lh-1 mb-3">Make an Appointment </h1>
+             <img src="/images\img1.gif" alt="calender"  width="" height="auto" class="col-8 fs-4">
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
             <form class="p-4 p-md-5 border rounded-3 bg-light">
@@ -159,7 +158,18 @@
     </main>
 
     <!-- footer  -->
-    <footer></footer>
+    <div class="container-fluid bg-dark ">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+        </footer>
+      </div>
 
 
 
