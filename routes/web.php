@@ -35,6 +35,7 @@ Route::get('/forgot', function () {
 Route::get('/reset', function () {
     return view('reset');
 });*/
+//les routes
 Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
 Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
 Route::get('rv/{id}/edit', [App\Http\Controllers\RendezController::class, 'edit']);
