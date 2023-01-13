@@ -12,7 +12,9 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/interface', function () {
+    return view('interface');
+});
  /*Route::get('/login', function () {
      return view('login');
 });*/
