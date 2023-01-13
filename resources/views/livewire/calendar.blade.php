@@ -1,6 +1,7 @@
 
 
 <script src='fullcalendar/core/locales-all.global.js'></script>
+<script src='fullcalendar/dist/index.global.js'></script>
 
 <style>
     #calendar-container {
@@ -32,8 +33,10 @@
     headerToolbar: {
         left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        initialView:'timeGridWeek',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
     },
+    initialView: 'timeGridWeek',
     locale: 'fr'
 })
         calendar.render();
