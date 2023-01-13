@@ -19,6 +19,9 @@ use App\Http\Controllers;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/interface', function () {
+    return view('interface');
+});
 
 /*Route::get('/rdv', function () {
     return view('formeRendez');
