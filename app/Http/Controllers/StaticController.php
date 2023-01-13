@@ -22,6 +22,14 @@ class StaticController extends Controller
 
     public function techniciens() {
         return view('admin.techniciens');
-    }}
+    }
+    public function responsable(){
+        return view('responsable.responsable');
+    }
+    public function responsabledashboard() {
+        return view('responsable.dashboard');
+    }
+
+}
    
     

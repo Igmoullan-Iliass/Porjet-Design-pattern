@@ -22,6 +22,10 @@ Route::get('/contact',[StaticController::class,'contact'])->name('contact');
 Route::get('/admin/accueil',[StaticController::class,'dashboard'])->name('dashboard');
 Route::get('/dashboard',[StaticController::class,'dashboard'])->name('dashboard'); 
 Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
+Route::get('/responsable',[StaticController::class,'responsable'])->name('responsable');
+Route::get('/responsable/dashboard',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
+
+
 
 
 Route::get('/t', function () {

@@ -28,7 +28,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <span class="text-white">espace admin <i class="bi bi-person-check text-white"></i></span>
+                    <span class="text-white">espace responsable <i class="bi bi-person-check text-white"></i></span>
                         
                     
                 </li>
@@ -39,7 +39,7 @@
                     <a href="{{route('techniciens')}}">les techniciens</a>
                 </li>
                 <li>
-                    <a href="#">cicurcales</a>
+                    <a href="#">succursales</a>
                 </li>
                 <li>
                     <a href="#">clients</a>
