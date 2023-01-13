@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::get('/login', function () {
+ /*Route::get('/login', function () {
      return view('login');
-});
+});*/
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/rdv', function () {
+/*Route::get('/rdv', function () {
     return view('formeRendez');
 });
 Route::get('/register', function () {
@@ -31,5 +31,6 @@ Route::get('/forgot', function () {
 });
 Route::get('/reset', function () {
     return view('reset');
-});
-
+});*/
+Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
+Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
