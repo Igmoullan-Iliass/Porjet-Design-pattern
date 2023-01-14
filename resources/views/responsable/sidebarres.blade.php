@@ -48,7 +48,7 @@
                     <a href="#">les rendez vous</a>
                 </li>
                 <li>
-                    <a href="#">logout</a>
+                    <a href="/">logout</a>
                 </li>
                 
             </ul>
