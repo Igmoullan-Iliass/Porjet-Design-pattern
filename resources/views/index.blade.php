@@ -33,17 +33,18 @@
            </div>
             <table class="table table-dark table-striped">
                 <tr>
+                <th>Username</th>
+                    <th>Event Start</th>
+                    <th>Event End</th>
                     
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Username</th>
                     <th>Action</th>
                 </tr>
                 @foreach($rvs as $rv)
                 <tr>
-                    <td>{{$rv->date}}</td>
-                    <td>{{$rv->time}}</td>
-                    <td>{{$rv->username}}</td>
+                <td>{{$rv->username}}</td>
+                    <td>{{$rv->event_start}}</td>
+                    <td>{{$rv->event_end}}</td>
+                    
                     <td>
                         <!--<a href="" class="btn btn-primary">Details</a>-->
                         
