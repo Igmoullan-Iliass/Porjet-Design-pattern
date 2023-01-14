@@ -13,7 +13,7 @@ class StaticController extends Controller
     public function admin() {
         return view('admin.admin');
     }
-    public function dashboard() {
+    public function admindashboard() {
         return view('admin.dashboard');
     }
     public function contact() {
@@ -25,6 +25,9 @@ class StaticController extends Controller
     }
     public function responsable(){
         return view('responsable.responsable');
+    }
+    public function siccurcalelist(){
+        return view('siccurcale.siccurcalelist');
     }
     public function responsabledashboard() {
         return view('responsable.dashboard');
