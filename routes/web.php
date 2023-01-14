@@ -22,6 +22,13 @@ Route::get('/', function () {
 Route::get('/interface', function () {
     return view('interface');
 });
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
 
 /*Route::get('/rdv', function () {
     return view('formeRendez');

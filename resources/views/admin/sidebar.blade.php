@@ -33,7 +33,7 @@
                     
                 </li>
                 <li>
-                    <a href="{{route('dashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+                    <a href="{{url('/dashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
