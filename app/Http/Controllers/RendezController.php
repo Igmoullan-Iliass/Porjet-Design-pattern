@@ -12,10 +12,10 @@ class RendezController extends Controller
         $listrv=Rendv::all();
         return view('index',['rvs'=>$listrv]);
     }
-    public function store(rvRequest $request){
+    public function store(Request $request){
         $rv=new Rendv();
-        $rv->date=$request->input('daterv');
-        $rv->time=$request->input('time');
+        $rv->event_start=$request->input('event_start');
+        $rv->event_end=$request->input('event_end');
         $rv->username=$request->input('username');
         $rv->telephone=$request->input('tel');
         $rv->email=$request->input('email');
@@ -28,10 +28,10 @@ class RendezController extends Controller
       $rv=Rendv::find($id);
       return view('edit',['rv'=>$rv]);
     }
-    public function update(rvRequest $request,$id){
+    public function update(Request $request,$id){
         $rv=Rendv::find($id);
-        $rv->date=$request->input('daterv');
-        $rv->time=$request->input('time');
+        $rv->event_start=$request->input('event_start');
+        $rv->event_end=$request->input('event_end');
         $rv->username=$request->input('username');
         $rv->telephone=$request->input('tel');
         $rv->email=$request->input('email');

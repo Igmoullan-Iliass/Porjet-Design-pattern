@@ -13,7 +13,7 @@ class rvRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,8 +24,8 @@ class rvRequest extends FormRequest
     public function rules()
     {
         return [
-            'daterv' => 'unique:Rendv,date,'.$this->id,
-            'time' => 'unique:Rendv,time,'.$this->id,
+            /*'daterv' => 'unique:Rendv,date,'.$this->id,
+            'time' => 'unique:Rendv,time,'.$this->id,*/
         ];
     }
 }
