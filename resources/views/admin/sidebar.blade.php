@@ -28,15 +28,25 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
+<<<<<<< HEAD
                     <span class="text-white">espace admin <i class="bi bi-person-check text-white"></i></span>
                         
                     
+=======
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+>>>>>>> parent of 5ea7609 (co1)
                 </li>
                 <li>
                     <a href="{{url('/dashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="#">Shortcuts</a>
+=======
+                    <a href="{{route('techniciens')}}">Shortcuts</a>
+>>>>>>> parent of 5ea7609 (co1)
                 </li>
                 <li>
                     <a href="#">Overview</a>

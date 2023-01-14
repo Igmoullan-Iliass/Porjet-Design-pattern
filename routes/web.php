@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers;
+use App\Http\Controllers\StaticController;
+use App\Http\Controllers\CalendarController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +16,18 @@ use App\Http\Controllers;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
+from saif
+*/
+Route::get('/test',[StaticController::class,'master'])->name('master');
+Route::get('/contact',[StaticController::class,'contact'])->name('contact');
+Route::get('/admin/accueil',[StaticController::class,'dashboard'])->name('dashboard');
+Route::get('/dashboard',[StaticController::class,'dashboard'])->name('dashboard');
+Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
+// Route::get('/technicienne/calendar',[CalendarController::class,'index'])->name('technicienne.calendar');
+
+Route::get('/technicienne/calendar', [CalendarController::class, 'index'])->name('technicienne.calendar');;
+Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents']);
 
  /*Route::get('/login', function () {
      return view('login');

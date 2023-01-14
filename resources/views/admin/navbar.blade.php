@@ -48,7 +48,11 @@
       <!-- Left links -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
+<<<<<<< HEAD
           <a class="nav-link active d-flex flex-column text-center" aria-current="page" href=#><span class="small">Home</span></a>
+=======
+          <a class="nav-link active d-flex flex-column text-center" aria-current="page" href="{{route('contact')}}"><i class="fas fa-home fa-lg"></i><span class="small">Home</span></a>
+>>>>>>> parent of 5ea7609 (co1)
 
         </li>
         <li class="nav-item">
