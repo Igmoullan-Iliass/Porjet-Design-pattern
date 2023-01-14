@@ -15,12 +15,15 @@ class CreateRendvTable extends Migration
     {
         Schema::create('rendv', function (Blueprint $table) {
             $table->id();
+            // $table->string('service_type');
+            $table->dateTime('event_start');
+            $table->dateTime('event_end');
             $table->string('username');
            $table->string('telephone');
-            $table->date('date');
             $table->string('email');
            $table->string('ville');
-            $table->string('time');
+            // $table->string('time');
+            // $table->date('date');
 
            /* $table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('id_client')->constrained('clients')->onDelete('cascade')->onUpdate('cascade');
