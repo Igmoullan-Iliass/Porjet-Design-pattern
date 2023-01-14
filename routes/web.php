@@ -44,7 +44,9 @@ Route::get('/admin', function () {
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
-
+Route::get('/siccurcalelist', function () {
+    return view('siccurcale.siccurcalelist');
+});
 
 /*Route::get('/rdv', function () {
     return view('formeRendez');
