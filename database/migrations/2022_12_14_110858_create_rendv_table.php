@@ -21,7 +21,7 @@ class CreateRendvTable extends Migration
             $table->string('email');
            $table->string('ville');
             $table->string('time');
-           
+
            /* $table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('id_client')->constrained('clients')->onDelete('cascade')->onUpdate('cascade');
             */
