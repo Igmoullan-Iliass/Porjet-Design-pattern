@@ -8,17 +8,20 @@
 </head>
 <body>
 <!--start navbar-->
-@include('admin.navbar')
+@include('responsable.navbar')
 <!-- end navbar-->
 <div id="sidebar" class="container-fluid"> 
-    <div id="content"class="row">
-        <div class="col-md-3">
-@include('admin.sidebar')
+    <div id="content" class="row mt-3">
+        <div class="col-md-1">
+@include('responsable.sidebar')
     </div>
-    <div class="col">
-@include('admin.dashboard')
+    <div class="col" >
+        
+        @yield('content')
+
     </div>
-    </div>
+    
+    
 
 </div>
 

@@ -65,6 +65,15 @@
                       <h5 class="modal-title " id="staticBackdropLabel">Pris de rendez-vous </h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    @if(count($errors))
+                    <div class="alert alert-danger" role="alert">
+                      <ul>
+            @foreach($errors->all() as $message)
+              <li>{{$message}}</li>
+            @endforeach
+              </ul>
+</div>
+@endif
                     <div class="modal-body">
                         <form class="row g-3 rounded-pill" action="{{url('rv')}}" method="POST">
                         {{csrf_field()}}    
@@ -72,6 +81,7 @@
                                 <label  class="form-label">username</label>
                                 <input type="text" class="form-control rounded-pill" name="username">
                               </div>
+                      
                             <div class="col-sm-4">
                               <label  class="form-label">Email</label>
                               <input type="email" class="form-control rounded-pill" name="email">
@@ -94,12 +104,12 @@
 
                             <div class="col-sm-4">
                               <label  class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control rounded-pill" name="daterv">
+                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{old('daterv')}}"> 
                             </div>
 
                             <div class="col-sm-4">
                                 <label class="form-label">temps</label>
-                                <select name="time" class="form-select rounded-pill">
+                                <select name="time" class="form-select rounded-pill" value="{{old('time')}}">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
