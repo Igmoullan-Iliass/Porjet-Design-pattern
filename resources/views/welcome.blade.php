@@ -107,9 +107,9 @@
                               <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{old('event_start')}}"> 
                             </div>
 
-                            <div class="col-sm-4">
+                             <!--<div class="col-sm-4">
                                 <label class="form-label">Event End</label>
-                                <!--<select name="event_end" class="form-select rounded-pill" value="{{old('event_end')}}">
+                               <select name="event_end" class="form-select rounded-pill" value="{{old('event_end')}}">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
@@ -118,10 +118,10 @@
                                   <option>10:00</option>
                                   <option>10:15</option>
                                   <option>10:30</option>
-                                </select>-->
+                                </select>
                   
                               <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}"> 
-                              </div>
+                              </div>-->
                               <input type="submit" class="btn btn-primary rounded-pill" value="Prendre le rendez vous">
                           </form>
                     </div>

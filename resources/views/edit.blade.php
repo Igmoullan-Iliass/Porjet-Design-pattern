@@ -63,10 +63,10 @@
                               <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{$rv->event_start}}" value="{{old('event_start')}}">
                             </div>
 
-                            <div class="col-sm-4">
+                           <!-- <div class="col-sm-4">
                                 <label class="form-label">Event End</label>
                                 <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{$rv->event_end}}" value="{{old('event_end')}}">
-                              </div>
+                              </div>-->
                               <input type="submit" class="btn btn-danger" value="Modifier">
                           </form>
                     </div>
