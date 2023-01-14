@@ -22,6 +22,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+           {{session()->get('success')}}
+                </div>
+                @endif
            <h1>Liste des RendezVous</h1>
            <div class="pull-right">
             <a href="{{url('/')}}" class="btn btn-primary">Nouveau RendezVous</a>

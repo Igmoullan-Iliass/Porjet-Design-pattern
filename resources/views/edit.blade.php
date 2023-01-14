@@ -20,6 +20,16 @@
 </head>
 
 <body>
+
+@if(count($errors))
+                    <div class="alert alert-danger" role="alert">
+                      <ul>
+            @foreach($errors->all() as $message)
+              <li>{{$message}}</li>
+            @endforeach
+              </ul>
+</div>
+@endif
                   <div class="modal-body">
                         <form class="row g-3 rounded-pill" action="{{url('rv/'.$rv->id)}}" method="POST">
                             <input type="hidden" name="_method" value="PUT">
@@ -50,12 +60,12 @@
 
                             <div class="col-sm-4">
                               <label  class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{$rv->daterv}}">
+                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{$rv->daterv}}" value="{{old('daterv')}}">
                             </div>
 
                             <div class="col-sm-4">
                                 <label class="form-label">temps</label>
-                                <select name="time" class="form-select rounded-pill">
+                                <select name="time" class="form-select rounded-pill" value="{{old('time')}}">
                                   <option selected>Choose...</option>
                                   <option>09:00</option>
                                   <option>09:15</option>
