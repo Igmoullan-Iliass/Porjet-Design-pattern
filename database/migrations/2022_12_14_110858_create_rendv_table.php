@@ -18,9 +18,9 @@ class CreateRendvTable extends Migration
             // $table->string('service_type');
             $table->dateTime('event_start');
             $table->dateTime('event_end');
-            $table->string('username');
-           $table->string('telephone');
-            $table->string('email');
+            $table->string('username');//
+           $table->string('telephone');//
+            $table->string('email');//
            $table->string('ville');
             // $table->string('time');
             // $table->date('date');
