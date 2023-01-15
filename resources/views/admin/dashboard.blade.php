@@ -16,9 +16,9 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <div class="card bg-primary text-white h-100">
-              <div class="card-body py-5">Primary Card</div>
-              <div class="card-footer d-flex">
-                View Details
+              <div class="card-body py-5 fs-2">1</div>
+              <div class="card-footer d-flex ">
+                techniciens
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -27,9 +27,9 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card bg-warning text-dark h-100">
-              <div class="card-body py-5">Warning Card</div>
+              <div class="card-body py-5 fs-2">0</div>
               <div class="card-footer d-flex">
-                View Details
+                siccurcales
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -38,9 +38,9 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card bg-success text-white h-100">
-              <div class="card-body py-5">Success Card</div>
+              <div class="card-body py-5 fs-2">2</div>
               <div class="card-footer d-flex">
-                View Details
+                rendez vous
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -48,10 +48,10 @@
             </div>
           </div>
           <div class="col-md-3 mb-3">
-            <div class="card bg-danger text-white h-100">
-              <div class="card-body py-5">Danger Card</div>
+            <div class="card bg-danger text-white h-70">
+              <div class="card-body py-5 fs-2">2</div>
               <div class="card-footer d-flex">
-                View Details
+                clients
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -64,10 +64,11 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Area Chart Example
+                statistique des rendez vous
               </div>
               <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
+                <canvas id="lineChart" width="400" height="200"></canvas>
+                
               </div>
             </div>
           </div>
@@ -75,53 +76,15 @@
             <div class="card h-100">
               <div class="card-header">
                 <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Area Chart Example
+                statistique des clients
               </div>
               <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
+                <canvas id="barChart" width="400" height="200"></canvas>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 mb-3">
-            <div class="card">
-              <div class="card-header">
-                <span><i class="bi bi-table me-2"></i></span> Data Table
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table
-                    id="example"
-                    class="table table-striped data-table"
-                    style="width: 100%"
-                  >
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                      </tr>
-                      
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </main>
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -130,6 +93,71 @@
     <script src="./js/jquery.dataTables.min.js"></script>
     <script src="./js/dataTables.bootstrap5.min.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+      //bar
+var ctxB = document.getElementById("barChart").getContext('2d');
+var myBarChart = new Chart(ctxB, {
+  type: 'bar',
+  data: {
+    labels: ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","november","december"],
+    datasets: [{
+      label: '# Mes clients',
+      data: [5,0,0,0,0,0,0,0,0,0,0,0],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+
+
+//line
+var ctxL = document.getElementById("lineChart").getContext('2d');
+var myLineChart = new Chart(ctxL, {
+  type: 'line',
+  data: {
+    labels: ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","november","december"],
+    datasets: [{
+      label: "rendez vous",
+      data: [5,0,0,0,0,0,0,0,0,0,0,0],
+      backgroundColor: [
+        'rgba(105, 0, 132, .2)',
+      ],
+      borderColor: [
+        'rgba(200, 99, 132, .7)',
+      ],
+      borderWidth: 2
+    }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+    </script>
   
  
 

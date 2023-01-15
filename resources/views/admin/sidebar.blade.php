@@ -8,7 +8,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
    
         <!-- Styles -->
         <style>
@@ -31,22 +31,22 @@
   
                 </li>
                 <li>
-                    <a href="{{route('admindashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+                    <a href="{{route('admindashboard')}}"><i class="bi bi-graph-down"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{route('techniciens')}}">les techniciens</a>
+                    <a href="{{route('techniciens')}}"><i class="bi bi-person-badge-fill"></i> les techniciens</a>
                 </li>
                 <li>
-                    <a href="{{route('siccurcalelist')}}">succursales</a>
+                    <a href="{{route('siccurcalelist')}}"><i class="bi bi-geo-alt-fill"></i> succursales</a>
                 </li>
                 <li>
-                    <a href="#">clients</a>
+                    <a href="#"><i class="bi bi-file-earmark-person"></i> clients</a>
                 </li>
                 <li>
-                    <a href="#">les rendez vous</a>
+                    <a href="#"><i class="bi bi-ui-checks-grid"></i> les rendez vous</a>
                 </li>
                 <li>
-                    <a href="#addEmployeeModal">logout</a>
+                    <a href="#addEmployeeModal"><i class="bi bi-box-arrow-up-left"></i> logout</a>
                 </li>
               
             </ul>

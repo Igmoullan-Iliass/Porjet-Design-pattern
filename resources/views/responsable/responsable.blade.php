@@ -36,7 +36,7 @@
 
 </head>
 <body>
-    <div class="row">@include('responsable.responsablenavbar')
+    <div class="row position-relative">@include('responsable.responsablenavbar')
 </div>
     <div class="row">
     <div class="col">    @include('responsable.responsablesidebar')
