@@ -14,8 +14,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-bell-fill"></i><span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
-  messages</a>
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-bell-fill"></i>  messages</a>
         </li>
         
         

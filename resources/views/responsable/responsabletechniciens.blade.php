@@ -1,5 +1,5 @@
 @extends('responsable.responsable')
-@section('content')
+@section('content2')
     
     <!-- top navigation bar -->
     <!-- offcanvas -->

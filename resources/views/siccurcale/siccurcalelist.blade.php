@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 @extends('admin.admin')
-=======
-@extends('responsable.responsable')
->>>>>>> Stashed changes
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -49,17 +45,10 @@
 									<label for="selectAll"></label>
 								</span>
 							</th>
-<<<<<<< Updated upstream
 							<th>nom</th>
 							<th>adresse</th>
 							<th>admin</th>
 							<th>responsable</th>
-=======
-							<th>Nom</th>
-							<th>adress</th>
-							<th>id_admin</th>
-							<th>id_resp</th>
->>>>>>> Stashed changes
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -79,13 +68,6 @@
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
-<<<<<<< Updated upstream
-=======
-						</tr>
-						
-						
-										
->>>>>>> Stashed changes
 						
 					</tbody>
 				</table>

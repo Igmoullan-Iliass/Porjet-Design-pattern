@@ -66,11 +66,7 @@
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-<<<<<<< Updated upstream
   background: rgb(44, 40, 40);
-=======
-  background: rgb(25, 25, 28);
->>>>>>> Stashed changes
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;

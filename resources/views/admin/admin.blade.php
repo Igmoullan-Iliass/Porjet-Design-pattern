@@ -32,33 +32,16 @@
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="/css/dashboard.css" />
 <!--end dashboard-->
-<link rel="stylesheet" href="/css/siccurcalestyle.css">
-<script type="text/javascript" src="/js/siccurcalejs.js"></script>
+
 
 </head>
 <body>
-<<<<<<< Updated upstream
     <div class="row">@include('admin.navbar')
 </div>
     <div class="row">
     <div class="col">    @include('admin.sidebar')
 </div>
     <div class="col-md-auto">@yield('content')</div>    
-=======
-<!--start navbar-->
-@include('admin.navbar')
-<!-- end navbar-->
-<div id="sidebar" class="container-fluid"> 
-    <div id="content"class="row">
-        <div class="col-md-3">
-@include('admin.sidebar')
-    </div>
-    <div class="col">
-@yield('content')
-    </div>
-    </div>
-
->>>>>>> Stashed changes
 </div>
 
 </body>
