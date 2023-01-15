@@ -10,6 +10,8 @@
     {{-- {!! HTML::style('css/css/') !!} --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <title>HOME </title>
     <style>
@@ -27,10 +29,10 @@
     <div class="container ">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <h2 class="shadow-blue" style=" font-family: 'Brush Script MT', cursive;font-size: 40px; "> Rendez-vous</h2>
+      <h2 class="shadow-blue animate__animated animate__fadeInLeft" style=" font-family: 'Brush Script MT', cursive;font-size: 40px; "> Rendez-vous</h2>
         </a>
 
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 ">
           <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">services</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">info</a></li>
@@ -39,8 +41,8 @@
         </ul>
 
         <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2 rounded-pill">Login</button>
-          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill" >Sign-up</button></a>
+          <button type="button" class="btn btn-outline-primary me-2 rounded-pill animate__animated animate__fadeInRight">Login</button>
+          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill animate__animated animate__fadeInRight" >Sign-up</button></a>
         </div>
       </header>
     </div>
@@ -51,7 +53,7 @@
       <!-- main 1 -->
       <div class="bg-dark text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-white shadow-blue " style=" font-family: 'Brush Script MT', cursive; " >Rendez-vous</h1>
+          <h1 class="display-5 fw-bold text-white shadow-blue animate__animated animate__bounceIn  " style=" font-family: 'Brush Script MT', cursive; " >Rendez-vous</h1>
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -76,12 +78,12 @@
 @endif
                     <div class="modal-body">
                         <form class="row g-3 rounded-pill" action="{{url('rv')}}" method="POST">
-                        {{csrf_field()}}    
+                        {{csrf_field()}}
                         <div class="col-sm-4">
                                 <label  class="form-label">username</label>
                                 <input type="text" class="form-control rounded-pill" name="username">
                               </div>
-                      
+
                             <div class="col-sm-4">
                               <label  class="form-label">Email</label>
                               <input type="email" class="form-control rounded-pill" name="email">
@@ -104,7 +106,7 @@
 
                             <div class="col-sm-4">
                               <label  class="form-label">Event Start </label>
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{old('event_start')}}"> 
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{old('event_start')}}">
                             </div>
 
                              <!--<div class="col-sm-4">
@@ -119,8 +121,8 @@
                                   <option>10:15</option>
                                   <option>10:30</option>
                                 </select>
-                  
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}"> 
+
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}">
                               </div>-->
                               <input type="submit" class="btn btn-primary rounded-pill" value="Prendre le rendez vous">
                           </form>
