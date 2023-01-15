@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Rendv;
 use App\Http\Requests\rvRequest;
+use Carbon\Carbon;
 
 class RendezController extends Controller
 {
     public function index(){
         $listrv=Rendv::all();
         return view('index',['rvs'=>$listrv]);
-        //return view('admin.adminrendezvous')->with('rendv',$listrv)
     }
     public function store(rvRequest $request){
         $rv=new Rendv();
-        $rv->date=$request->input('daterv');
-        $rv->time=$request->input('time');
+        $rv->event_start=$request->input('event_start');
+       // $rv->event_end=$request->input('event_end');
+       $date = Carbon::parse($rv->event_start);
+       $rv->event_end= $date->addMinutes(15);
         $rv->username=$request->input('username');
         $rv->telephone=$request->input('tel');
         $rv->email=$request->input('email');
@@ -31,8 +33,10 @@ class RendezController extends Controller
     }
     public function update(rvRequest $request,$id){
         $rv=Rendv::find($id);
-        $rv->date=$request->input('daterv');
-        $rv->time=$request->input('time');
+        $rv->event_start=$request->input('event_start');
+       // $rv->event_end=$request->input('event_end');
+       $date = Carbon::parse($rv->event_start);
+       $rv->event_end= $date->addMinutes(15);
         $rv->username=$request->input('username');
         $rv->telephone=$request->input('tel');
         $rv->email=$request->input('email');
