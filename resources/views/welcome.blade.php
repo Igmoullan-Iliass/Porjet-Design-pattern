@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <title>HOME </title>
+    <title>Home Page </title>
     <style>
       .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
 
