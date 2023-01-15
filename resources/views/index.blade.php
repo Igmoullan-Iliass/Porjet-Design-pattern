@@ -33,8 +33,6 @@
 							<h2> <b>siccurcales</b></h2>
 						</div>
 						<div class="col-xs-6">
-							<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i><span>modifier</span></a>
-							<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>supprimer</span></a>						
 						</div>
 					</div>
 				</div>
@@ -77,8 +75,8 @@
                                 <form action="{{url('rv/'.$rv->id)}}" method="post">
                             {{csrf_field()}}
                             {{method_field('DELETE')}}
-                            <a href="{{url('rv/'.$rv->id.'/edit')}}"class="btn btn-secondary"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <button type="submit" class="btn btn-danger"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
+                            <a href="{{url('rv/'.$rv->id.'/edit')}}"class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <button type="submit" class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
                         </form>
                             </td>
                 
