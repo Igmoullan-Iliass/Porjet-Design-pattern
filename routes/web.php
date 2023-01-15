@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\CalendarController;
-use App\Http\Controllers\RendezController;
 
 
 
@@ -22,65 +21,37 @@ from saif
 */
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
-
-Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
-Route::get('/responsable/accueil',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
-
-Route::get('/admin/admindashboard',[StaticController::class,'admindashboard'])->name('admindashboard');
-Route::get('/responsable/responsabledashboard',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
-
-Route::get('/admin/siccurcalelist',[StaticController::class,'siccurcalelist'])->name('siccurcalelist');
-Route::get('/responsable/siccurcalelist',[StaticController::class,'responsablesiccurcalelist'])->name('responsablesiccurcalelist');
-
-Route::get('/admin/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
-Route::get('/responsable/techniciens',[StaticController::class,'responsabletechniciens'])->name('responsabletechniciens');
-
-Route::get('/admin/rendezvous',[StaticController::class,'adminrendezvous'])->name('adminrendezvous');
-Route::get('/responsable/rendezvous',[StaticController::class,'responsablerendezvous'])->name('responsablerendezvous');
-
-
-
-
+Route::get('/admin/accueil',[StaticController::class,'dashboard'])->name('dashboard');
+Route::get('/welcome',[StaticController::class,'welcome'])->name('welcome');
+Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
 // Route::get('/technicienne/calendar',[CalendarController::class,'index'])->name('technicienne.calendar');
 
 Route::get('/technicienne/calendar', [CalendarController::class, 'index'])->name('technicienne.calendar');;
 Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents']);
 
- /*Route::get('/login', function () {
-     return view('login');
-});*/
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/home', function () {
+    return view('navigation-menu');
+});
+Route::get('/dashboard', function () {
+    return view('home');
 });
 Route::get('/interface', function () {
     return view('interface');
 });
-
-Route::get('/siccurcalelist22', function () {
-    return view('responsable.responsablesiccurcalelist');
+Route::get('/admin', function () {
+    return view('admin.admin');
 });
-
-Route::get('/home',[HomeController::class, 'redirect']);
-
-Route::get('/rv', function () {
-    return view('index');
+Route::get('/siccurcalelist', function () {
+    return view('siccurcale.siccurcalelist');
 });
 
 
-
-/*Route::get('/rdv', function () {
-    return view('formeRendez');
-});
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/forgot', function () {
-    return view('forgot');
-});
-Route::get('/reset', function () {
-    return view('reset');
-});*/
-//les routes
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('home');
+})->name('home');
 
 Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
 Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
