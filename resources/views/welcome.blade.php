@@ -129,7 +129,7 @@
                     </div>
                     <div class="modal-footer col-md-12 text-center ">
                       {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                      <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button>
+                      {{-- <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button> --}}
                     </div>
                   </div>
                 </div>
