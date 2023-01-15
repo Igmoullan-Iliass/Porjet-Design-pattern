@@ -35,117 +35,7 @@
 
 <body>
 
-    <!-- Navbar -->
-
-
-    <div class="container ">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <h2 class="shadow-blue animate__animated animate__fadeInLeft" style=" font-family: 'Brush Script MT', cursive;font-size: 40px; "> Rendez-vous</h2>
-        </a>
-
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 ">
-          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">services</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">info</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">help</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2 rounded-pill animate__animated animate__fadeInRight">Login</button>
-          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill animate__animated animate__fadeInRight" >Sign-up</button></a>
-        </div>
-      </header>
-    </div>
-
-    <!-- main  -->
-    <main class="container-fluid " >
-
-      <!-- main 1 -->
-      <div class="bg-dark text-secondary px-4 py-5 text-center">
-        <div class="py-5">
-          <h1 class="display-5 fw-bold text-white shadow-blue animate__animated animate__bounceIn  " style=" font-family: 'Brush Script MT', cursive; " >Rendez-vous</h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4">management software and online appointment booking.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
-
-                {{-- modale pour Forme prise de rendez vous  --}}
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title " id="staticBackdropLabel">Pris de rendez-vous </h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    @if(count($errors))
-                    <div class="alert alert-danger" role="alert">
-                      <ul>
-            @foreach($errors->all() as $message)
-              <li>{{$message}}</li>
-            @endforeach
-              </ul>
-</div>
-@endif
-                    <div class="modal-body">
-                        <form class="row g-3 rounded-pill" action="{{url('rv')}}" method="POST">
-                        {{csrf_field()}}
-                        <div class="col-sm-4">
-                                <label  class="form-label">username</label>
-                                <input type="text" class="form-control rounded-pill" name="username">
-                              </div>
-
-                            <div class="col-sm-4">
-                              <label  class="form-label">Email</label>
-                              <input type="email" class="form-control rounded-pill" name="email">
-                            </div>
-
-
-                            <div class="col-sm-4">
-                              <label  class="form-label">tel</label>
-                              <input type="text" class="form-control rounded-pill" name="tel" placeholder="+212 6...">
-                            </div>
-
-                            <div class="col-sm-4">
-                                <label class="form-label">city</label>
-                                <select name="city" class="form-select rounded-pill">
-                                  <option selected>Choose...</option>
-                                  <option>Marrakech</option>
-                                  <option>casa</option>
-                                </select>
-                              </div>
-
-                            <div class="col-sm-4">
-                              <label  class="form-label">Event Start </label>
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{old('event_start')}}">
-                            </div>
-
-                             <!--<div class="col-sm-4">
-                                <label class="form-label">Event End</label>
-                               <select name="event_end" class="form-select rounded-pill" value="{{old('event_end')}}">
-                                  <option selected>Choose...</option>
-                                  <option>09:00</option>
-                                  <option>09:15</option>
-                                  <option>09:30</option>
-                                  <option>09:45</option>
-                                  <option>10:00</option>
-                                  <option>10:15</option>
-                                  <option>10:30</option>
-                                </select>
-
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}">
-                              </div>-->
-                              <input type="submit" class="btn btn-primary rounded-pill" value="Prendre le rendez vous">
-                          </form>
-                    </div>
-                    <div class="modal-footer col-md-12 text-center ">
-                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                      <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+   
 
               {{-- fin pour fomr  --}}
               <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
@@ -166,13 +56,13 @@
             @auth
             <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
             @else
-              <a href="{{url('login')}} "> Login </a>
+              <a href="{{url('login')}} " class="text-sm text-gray-700 underline"> Login </a>
               <br>
               @if (Route::has('register'))
 
               <hr class="my-4">
               <hr class="my-4">
-              <a href="{{ route('register') }}"> Sign up</a>
+              <a href="{{ route('register') }}" class="text-sm text-gray-700 underline"> Sign up</a>
 
               <br><br>
               <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
