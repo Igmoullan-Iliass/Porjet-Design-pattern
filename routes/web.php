@@ -67,3 +67,7 @@ Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
 Route::get('rv/{id}/edit', [App\Http\Controllers\RendezController::class, 'edit']);
 Route::put('rv/{id}', [App\Http\Controllers\RendezController::class, 'update']);
 Route::delete('rv/{id}', [App\Http\Controllers\RendezController::class, 'destroy']);
+
+Route::get('/technicienne/side&navbare', function () {
+    return view('technicienne.side&navbare');
+});
