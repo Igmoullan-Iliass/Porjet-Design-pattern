@@ -30,7 +30,7 @@
 				<div class="table-title">
 					<div class="row">
 						<div class="col-xs-6">
-							<h2> <b>siccurcales</b></h2>
+							<h2> <b>rendez vous</b></h2>
 						</div>
 						<div class="col-xs-6">
 						</div>
@@ -49,6 +49,8 @@
 							<th>telephone</th>
 							<th>email</th>
 							<th>ville</th>
+							<th>event_start</th>
+							<th>event_end</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
@@ -69,6 +71,8 @@
                     <td>{{$rv->telephone}}</td>
                     <td>{{$rv->email}}</td>
                     <td>{{$rv->ville}}</td>
+					<td>{{$rv->event_start}}</td>
+					<td>{{$rv->event_end}}</td>
                 
                     <td>
 								
