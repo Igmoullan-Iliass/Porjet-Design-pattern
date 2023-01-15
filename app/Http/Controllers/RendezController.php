@@ -11,6 +11,7 @@ class RendezController extends Controller
     public function index(){
         $listrv=Rendv::all();
         return view('index',['rvs'=>$listrv]);
+        //return view('admin.adminrendezvous')->with('rendv',$listrv)
     }
     public function store(rvRequest $request){
         $rv=new Rendv();

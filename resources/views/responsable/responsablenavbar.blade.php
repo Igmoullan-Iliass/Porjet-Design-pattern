@@ -13,7 +13,7 @@
           <a class="nav-link" href="#"></a>
         </li>
         
-        <li class="nav-item ms-auto">
+        <li class="nav-item ">
           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-bell-fill"></i>  messages</a>
         </li>
         

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\RendezController;
 
 
 
@@ -23,7 +24,7 @@ Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
 
 Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
-Route::get('/responsable/accueil',[StaticController::class,'responsable'])->name('responsable');
+Route::get('/responsable/accueil',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
 
 Route::get('/admin/admindashboard',[StaticController::class,'admindashboard'])->name('admindashboard');
 Route::get('/responsable/responsabledashboard',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
@@ -33,6 +34,10 @@ Route::get('/responsable/siccurcalelist',[StaticController::class,'responsablesi
 
 Route::get('/admin/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
 Route::get('/responsable/techniciens',[StaticController::class,'responsabletechniciens'])->name('responsabletechniciens');
+
+Route::get('/admin/rendezvous',[StaticController::class,'adminrendezvous'])->name('adminrendezvous');
+Route::get('/responsable/rendezvous',[StaticController::class,'responsablerendezvous'])->name('responsablerendezvous');
+
 
 
 
@@ -57,6 +62,9 @@ Route::get('/siccurcalelist22', function () {
 
 Route::get('/home',[HomeController::class, 'redirect']);
 
+Route::get('/rv', function () {
+    return view('index');
+});
 
 
 

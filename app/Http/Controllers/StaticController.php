@@ -40,6 +40,13 @@ class StaticController extends Controller
     public function responsablesiccurcalelist(){
         return view('responsable.responsablesiccurcalelist');
     }
+
+    public function adminrendezvous(){
+        return view('admin.adminrendezvous');
+    }
+    public function responsablerendezvous(){
+        return view('responsable.responsablerendezvous');
+    }
     
     
 

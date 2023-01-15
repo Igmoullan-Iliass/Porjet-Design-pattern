@@ -43,7 +43,7 @@
                     <a href="#"><i class="bi bi-file-earmark-person"></i> clients</a>
                 </li>
                 <li>
-                    <a href="#"><i class="bi bi-ui-checks-grid"></i> les rendez vous</a>
+                    <a href="{{url('rv')}}"><i class="bi bi-ui-checks-grid"></i> les rendez vous</a>
                 </li>
                 <li>
                     <a href="#addEmployeeModal"><i class="bi bi-box-arrow-up-left"></i> logout</a>

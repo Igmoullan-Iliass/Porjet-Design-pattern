@@ -43,7 +43,7 @@
                     <a href="#">clients</a>
                 </li>
                 <li>
-                    <a href="#">les rendez vous</a>
+                    <a href="{{url('rv')}}">les rendez vous</a>
                 </li>
                 <li>
                     <a href="#addEmployeeModal">logout</a>
