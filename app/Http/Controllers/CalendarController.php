@@ -4,9 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Rendv;
+use Illuminate\Contracts\View\View;
 
 class CalendarController extends Controller
 {
+
+
+    public function index(){
+
+        $events = array();
+        $Rendvs = Rendv::all();
+
+        foreach($Rendvs as $rendv){
+            $events[]= [
+                    'title' => $rendv->username,
+                    'start' => $rendv->event_start,
+                    'end' => $rendv->event_end,
+
+
+            ];
+        }
+        // return $events;
+        return view('technicienne.calendar',['events' => $events]);
+    }
     /**
      * Handle the incoming request.
      *
@@ -19,16 +39,17 @@ class CalendarController extends Controller
     //      return view('technicienne.calendar');
     //  }
 
-     public function index(Request $request)
-     {
-         if($request->ajax()) {
-             $data = Rendv::whereDate('event_start', '>=', $request->start)
-                 ->whereDate('event_end',   '<=', $request->end)
-                 ->get(['id', 'username', 'event_start', 'event_end']);
-             return response()->json($data);
-         }
-         return view('technicienne.calendar');
-     }
+    //  public function index(Request $request)
+    //  {
+    //      if($request->ajax()) {
+    //          $data = Rendv::whereDate('event_start', '>=', $request->start)
+    //              ->whereDate('event_end',   '<=', $request->end)
+    //              ->get(['id', 'username', 'event_start', 'event_end']);
+    //          return response()->json($data);
+    //      }
+    //      return view('technicienne.calendar');
+    //  }
+
 
      public function calendarEvents(Request $request)
      {
