@@ -45,8 +45,8 @@
         </ul>
 
         <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2 rounded-pill animate__animated animate__fadeInRight">Login</button>
-          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill animate__animated animate__fadeInRight" >Sign-up</button></a>
+          <button type="button" class="btn btn-outline-primary me-2 rounded-pill animate__animated animate__fadeInRight ">Login</button>
+          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill animate__animated animate__fadeInRight " >Sign-up</button></a>
         </div>
       </header>
     </div>
