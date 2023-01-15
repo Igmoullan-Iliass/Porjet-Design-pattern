@@ -13,9 +13,12 @@ class StaticController extends Controller
     public function admin() {
         return view('admin.admin');
     }
+<<<<<<< Updated upstream
     public function responsable(){
         return view('responsable.responsable');
     }
+=======
+>>>>>>> Stashed changes
     public function admindashboard() {
         return view('admin.dashboard');
     }

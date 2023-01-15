@@ -37,7 +37,11 @@
                     <a href="{{route('responsabletechniciens')}}">les techniciens</a>
                 </li>
                 <li>
+<<<<<<< Updated upstream:resources/views/responsable/responsablesidebar.blade.php
                     <a href="{{route('responsablesiccurcalelist')}}">succursales</a>
+=======
+                    <a href="{{route('siccurcalelist')}}">succursales</a>
+>>>>>>> Stashed changes:resources/views/responsable/sidebar.blade.php
                 </li>
                 <li>
                     <a href="#">clients</a>

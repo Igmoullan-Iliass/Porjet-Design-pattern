@@ -21,6 +21,7 @@ from saif
 */
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
+<<<<<<< Updated upstream
 
 Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
 Route::get('/responsable/accueil',[StaticController::class,'responsable'])->name('responsable');
@@ -36,6 +37,11 @@ Route::get('/responsable/techniciens',[StaticController::class,'responsabletechn
 
 
 
+=======
+Route::get('/admin/accueil',[StaticController::class,'admin'])->name('admin');
+Route::get('/admin/dashboard',[StaticController::class,'admin'])->name('admin');
+Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
+>>>>>>> Stashed changes
 // Route::get('/technicienne/calendar',[CalendarController::class,'index'])->name('technicienne.calendar');
 
 Route::get('/technicienne/calendar', [CalendarController::class, 'index'])->name('technicienne.calendar');;

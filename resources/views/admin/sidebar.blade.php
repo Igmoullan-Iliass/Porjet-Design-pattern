@@ -28,7 +28,15 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <span class="text-white">espace admin <i class="bi bi-person-check text-white"></i></span>
+<<<<<<< Updated upstream
   
+=======
+                        
+                    
+                </li>
+                <li>
+                    <a href="{{url('/admin/dashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+>>>>>>> Stashed changes
                 </li>
                 <li>
                     <a href="{{route('admindashboard')}}"><i class="bi bi-graph-down"></i> Dashboard</a>
