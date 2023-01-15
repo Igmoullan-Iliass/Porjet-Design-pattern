@@ -35,6 +35,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('navigation-menu');
 });
+Route::get('/dashboard', function () {
+    return view('home');
+});
 Route::get('/interface', function () {
     return view('interface');
 });
