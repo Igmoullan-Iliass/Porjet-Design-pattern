@@ -42,10 +42,11 @@
               <hr class="my-4">
               <hr class="my-4">
               <a href="{{ route('register') }}"> Sign up</a>
+              
+              <br><br>
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
               @endif
                     @endauth @endif
-                    <br><br>
-              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
               
             </form>
           </div>
