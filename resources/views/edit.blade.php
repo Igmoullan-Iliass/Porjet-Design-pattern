@@ -59,23 +59,14 @@
                               </div>
 
                             <div class="col-sm-4">
-                              <label  class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{$rv->daterv}}" value="{{old('daterv')}}">
+                              <label  class="form-label">Event Start</label>
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{$rv->event_start}}" value="{{old('event_start')}}">
                             </div>
 
-                            <div class="col-sm-4">
-                                <label class="form-label">temps</label>
-                                <select name="time" class="form-select rounded-pill" value="{{old('time')}}">
-                                  <option selected>Choose...</option>
-                                  <option>09:00</option>
-                                  <option>09:15</option>
-                                  <option>09:30</option>
-                                  <option>09:45</option>
-                                  <option>10:00</option>
-                                  <option>10:15</option>
-                                  <option>10:30</option>
-                                </select>
-                              </div>
+                           <!-- <div class="col-sm-4">
+                                <label class="form-label">Event End</label>
+                                <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{$rv->event_end}}" value="{{old('event_end')}}">
+                              </div>-->
                               <input type="submit" class="btn btn-danger" value="Modifier">
                           </form>
                     </div>

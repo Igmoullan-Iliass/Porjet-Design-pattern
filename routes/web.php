@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\CalendarController;
 
@@ -47,6 +48,11 @@ Route::get('/dashboard', function () {
 Route::get('/siccurcalelist', function () {
     return view('siccurcale.siccurcalelist');
 });
+
+Route::get('/home',[HomeController::class, 'redirect']);
+
+
+
 
 /*Route::get('/rdv', function () {
     return view('formeRendez');

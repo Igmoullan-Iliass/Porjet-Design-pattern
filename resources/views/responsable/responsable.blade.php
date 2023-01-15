@@ -8,12 +8,12 @@
 </head>
 <body>
 <!--start navbar-->
-@include('responsable.navbar')
+@include('admin.navbarres')
 <!-- end navbar-->
 <div id="sidebar" class="container-fluid"> 
     <div id="content" class="row mt-3">
         <div class="col-md-1">
-@include('responsable.sidebar')
+@include('admin.sidebarres')
     </div>
     <div class="col" >
         

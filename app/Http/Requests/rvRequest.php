@@ -24,8 +24,8 @@ class rvRequest extends FormRequest
     public function rules()
     {
         return [
-            'daterv' => 'unique:Rendv,date,'.$this->id,
-            'time' => 'unique:Rendv,time,'.$this->id,
+            'event_start' => 'unique:Rendv,event_start,'.$this->id,
+            /*'time' => 'unique:Rendv,time,'.$this->id,*/
         ];
     }
 }
