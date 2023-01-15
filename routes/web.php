@@ -22,18 +22,18 @@ from saif
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
 Route::get('/admin/accueil',[StaticController::class,'dashboard'])->name('dashboard');
-Route::get('/dashboard',[StaticController::class,'dashboard'])->name('dashboard');
+Route::get('/welcome',[StaticController::class,'welcome'])->name('welcome');
 Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
 // Route::get('/technicienne/calendar',[CalendarController::class,'index'])->name('technicienne.calendar');
 
 Route::get('/technicienne/calendar', [CalendarController::class, 'index'])->name('technicienne.calendar');;
 Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents']);
 
- /*Route::get('/login', function () {
-     return view('login');
-});*/
 Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/home', function () {
+    return view('navigation-menu');
 });
 Route::get('/interface', function () {
     return view('interface');
@@ -41,26 +41,14 @@ Route::get('/interface', function () {
 Route::get('/admin', function () {
     return view('admin.admin');
 });
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
 Route::get('/siccurcalelist', function () {
     return view('siccurcale.siccurcalelist');
 });
 
-/*Route::get('/rdv', function () {
-    return view('formeRendez');
-});
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/forgot', function () {
-    return view('forgot');
-});
-Route::get('/reset', function () {
-    return view('reset');
-});*/
-//les routes
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
+    return view('home');
+})->name('home');
 
 Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
 Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);

@@ -9,7 +9,7 @@ class registerController extends Controller
     public function showregister(){
         return View::make('/register');
     }
-    public function showWelcome(){
+    public function showlogin(){
         return View::make('/login');
     }
     public function showForget(){

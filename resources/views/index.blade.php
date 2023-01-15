@@ -29,7 +29,7 @@
                 @endif
            <h1>Liste des RendezVous</h1>
            <div class="pull-right">
-            <a href="{{url('/')}}" class="btn btn-primary">Nouveau RendezVous</a>
+            <a href="{{url('/home')}}" class="btn btn-primary">Nouveau RendezVous</a>
            </div>
             <table class="table table-dark table-striped">
                 <tr>
