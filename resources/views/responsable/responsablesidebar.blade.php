@@ -27,17 +27,17 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <span class="text-white">espace admin <i class="bi bi-person-check text-white"></i></span>
+                    <span class="text-white">espace responsable <i class="bi bi-person-check text-white"></i></span>
   
                 </li>
                 <li>
-                    <a href="{{route('admindashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+                    <a href="{{route('responsabledashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{route('techniciens')}}">les techniciens</a>
+                    <a href="{{route('responsabletechniciens')}}">les techniciens</a>
                 </li>
                 <li>
-                    <a href="{{route('siccurcalelist')}}">succursales</a>
+                    <a href="{{route('responsablesiccurcalelist')}}">succursales</a>
                 </li>
                 <li>
                     <a href="#">clients</a>

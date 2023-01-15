@@ -36,12 +36,12 @@
 
 </head>
 <body>
-    <div class="row">@include('responsable.navbar')
+    <div class="row">@include('responsable.responsablenavbar')
 </div>
     <div class="row">
-    <div class="col">    @include('responsable.sidebar')
+    <div class="col">    @include('responsable.responsablesidebar')
 </div>
-    <div class="col-md-auto">@yield('content')</div>    
+    <div class="col-md-auto">@yield('content2')</div>    
 </div>
 
 </body>

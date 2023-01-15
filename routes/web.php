@@ -21,11 +21,20 @@ from saif
 */
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
-Route::get('/admin/accueil',[StaticController::class,'admin'])->name('admin');
-Route::get('/admindashboard',[StaticController::class,'admindashboard'])->name('admindashboard');
-Route::get('/responsable',[StaticController::class,'responsable'])->name('responsable');
+
+Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
+Route::get('/responsable/accueil',[StaticController::class,'responsable'])->name('responsable');
+
+Route::get('/admin/admindashboard',[StaticController::class,'admindashboard'])->name('admindashboard');
+Route::get('/responsable/responsabledashboard',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
+
 Route::get('/admin/siccurcalelist',[StaticController::class,'siccurcalelist'])->name('siccurcalelist');
+Route::get('/responsable/siccurcalelist',[StaticController::class,'responsablesiccurcalelist'])->name('responsablesiccurcalelist');
+
 Route::get('/admin/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
+Route::get('/responsable/techniciens',[StaticController::class,'responsabletechniciens'])->name('responsabletechniciens');
+
+
 
 // Route::get('/technicienne/calendar',[CalendarController::class,'index'])->name('technicienne.calendar');
 
@@ -42,8 +51,8 @@ Route::get('/interface', function () {
     return view('interface');
 });
 
-Route::get('/siccurcalelist', function () {
-    return view('siccurcale.siccurcalelist');
+Route::get('/siccurcalelist22', function () {
+    return view('responsable.responsablesiccurcalelist');
 });
 
 /*Route::get('/rdv', function () {
