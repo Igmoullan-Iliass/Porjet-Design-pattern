@@ -31,7 +31,7 @@
         </a>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Dashboard</a></li>
+          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">services</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">info</a></li>
           <li><a href="#" class="nav-link px-2 link-dark">help</a></li>
@@ -39,18 +39,8 @@
         </ul>
 
         <div class="col-md-3 text-end">
-        @if (Route::has('login'))
-        
-        <a href="{{ route('login') }}" ><button type="button" class="btn btn-outline-primary me-2 rounded-pill">Login</button></a>
-         
-          @endif
-
-          @if (Route::has('register'))
-         
-
-          <a href="{{ route('register') }}" ><button type="button" class="btn btn-primary rounded-pill" >Sign-up</button></a>
-        
-          @endif
+          <button type="button" class="btn btn-outline-primary me-2 rounded-pill">Login</button>
+          <a href="#Sign-up" ><button type="button" class="btn btn-primary rounded-pill" >Sign-up</button></a>
         </div>
       </header>
     </div>
@@ -65,9 +55,8 @@
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" > <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button></a>
-              @endif
+              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
+
                 {{-- modale pour Forme prise de rendez vous  --}}
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -185,7 +174,7 @@
     <div class="container-fluid bg-dark ">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Dashboard</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>

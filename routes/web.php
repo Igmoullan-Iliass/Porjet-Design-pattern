@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StaticController;
 use App\Http\Controllers\CalendarController;
 
@@ -49,11 +48,6 @@ Route::get('/siccurcalelist', function () {
     return view('siccurcale.siccurcalelist');
 });
 
-Route::get('/home',[HomeController::class, 'redirect']);
-
-
-
-
 /*Route::get('/rdv', function () {
     return view('formeRendez');
 });
@@ -73,7 +67,3 @@ Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
 Route::get('rv/{id}/edit', [App\Http\Controllers\RendezController::class, 'edit']);
 Route::put('rv/{id}', [App\Http\Controllers\RendezController::class, 'update']);
 Route::delete('rv/{id}', [App\Http\Controllers\RendezController::class, 'destroy']);
-
-Route::get('/technicienne/side&navbare', function () {
-    return view('technicienne.side&navbare');
-});
