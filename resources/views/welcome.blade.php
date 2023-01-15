@@ -56,7 +56,7 @@
             <form class="p-4 p-md-5 border rounded-3 bg-light">
             @if (Route::has('login'))
             @auth
-            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
             @else
               <a href="{{url('login')}} " class="text-sm text-gray-700 underline"> Login </a>
               <br>

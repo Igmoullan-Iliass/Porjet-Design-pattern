@@ -13,8 +13,15 @@ class StaticController extends Controller
     public function admin() {
         return view('admin.admin');
     }
-    public function dashboard() {
+    public function responsable(){
+        return view('responsable.responsable');
+    }
+    public function admindashboard() {
         return view('admin.dashboard');
+    }
+
+    public function responsabledashboard() {
+        return view('responsable.responsabledashboard');
     }
     public function contact() {
         return view('layout.contact');
@@ -23,12 +30,25 @@ class StaticController extends Controller
     public function techniciens() {
         return view('admin.techniciens');
     }
-    public function responsable(){
-        return view('responsable.responsable');
+    public function responsabletechniciens() {
+        return view('responsable.responsabletechniciens');
     }
-    public function responsabledashboard() {
-        return view('responsable.dashboard');
+    
+    public function siccurcalelist(){
+        return view('siccurcale.siccurcalelist');
     }
+    public function responsablesiccurcalelist(){
+        return view('responsable.responsablesiccurcalelist');
+    }
+
+    public function adminrendezvous(){
+        return view('admin.adminrendezvous');
+    }
+    public function responsablerendezvous(){
+        return view('responsable.responsablerendezvous');
+    }
+    
+    
 
 }
    

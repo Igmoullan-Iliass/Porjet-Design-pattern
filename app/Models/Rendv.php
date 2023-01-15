@@ -9,12 +9,4 @@ class Rendv extends Model
 {
     use HasFactory;
     protected $table = 'Rendv';
-    protected $fillable = [
-        'username',
-        'event_start',
-        'event_end',
-        'telephone',
-        'email',
-        'ville'
-    ];
 }
