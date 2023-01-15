@@ -17,6 +17,10 @@
     <style>
       .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
 
+        .cd:hover {
+            transform: scale(1.07);
+            text-shadow: 3px 3px 3px #ababab;
+        }
     </style>
 
 </head>
@@ -57,7 +61,7 @@
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
+              <button type="button" class="cd btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
 
                 {{-- modale pour Forme prise de rendez vous  --}}
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -80,24 +84,24 @@
                         <form class="row g-3 rounded-pill" action="{{url('rv')}}" method="POST">
                         {{csrf_field()}}
                         <div class="col-sm-4">
-                                <label  class="form-label">username</label>
-                                <input type="text" class="form-control rounded-pill" name="username">
+                                <label  class="form-label">Username</label>
+                                <input type="text" class="cd form-control rounded-pill" name="username">
                               </div>
 
                             <div class="col-sm-4">
                               <label  class="form-label">Email</label>
-                              <input type="email" class="form-control rounded-pill" name="email">
+                              <input type="email" class="cd form-control rounded-pill" name="email">
                             </div>
 
 
                             <div class="col-sm-4">
-                              <label  class="form-label">tel</label>
-                              <input type="text" class="form-control rounded-pill" name="tel" placeholder="+212 6...">
+                              <label  class="form-label">Phone</label>
+                              <input type="text" class="cd form-control rounded-pill" name="tel" placeholder="+212 6...">
                             </div>
 
                             <div class="col-sm-4">
-                                <label class="form-label">city</label>
-                                <select name="city" class="form-select rounded-pill">
+                                <label class="form-label ">city</label>
+                                <select name="city" class="cd form-select rounded-pill">
                                   <option selected>Choose...</option>
                                   <option>Marrakech</option>
                                   <option>casa</option>
@@ -106,7 +110,7 @@
 
                             <div class="col-sm-4">
                               <label  class="form-label">Event Start </label>
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{old('event_start')}}">
+                              <input type="datetime-local" class="cd form-control rounded-pill" name="event_start" value="{{old('event_start')}}">
                             </div>
 
                              <!--<div class="col-sm-4">
@@ -124,7 +128,8 @@
 
                               <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}">
                               </div>-->
-                              <input type="submit" class="btn btn-primary rounded-pill" value="Prendre le rendez vous">
+
+                              <input type="submit" class="btn btn-primary rounded-pill " value="Prendre le rendez vous">
                           </form>
                     </div>
                     <div class="modal-footer col-md-12 text-center ">
@@ -136,7 +141,7 @@
               </div>
 
               {{-- fin pour fomr  --}}
-              <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
+              <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill cd ">connectez-vous</button></a>
             </div>
           </div>
         </div>
