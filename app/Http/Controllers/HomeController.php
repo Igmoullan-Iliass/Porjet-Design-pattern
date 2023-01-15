@@ -12,12 +12,18 @@ class HomeController extends Controller
 
         if(Auth::id()){
 
-            if(Auth::user()->usertype=='0')
+            if(Auth::user()->usertype=='1')
             {
-                return view('user.home');
+                return view('admin.home');
+            }
+            else  if(Auth::user()->usertype=='2'){
+                return view('technicien.home');
+            }
+            else  if(Auth::user()->usertype=='3'){
+                return view('succurcal.home');
             }
             else{
-                return view('admin.home');
+                return view('user.home');
             }
         }
 
