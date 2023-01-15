@@ -55,8 +55,14 @@
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">management software and online appointment booking.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<<<<<<< Updated upstream
               <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
 
+=======
+            
+             <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Prend un Render-vous</button>
+             
+>>>>>>> Stashed changes
                 {{-- modale pour Forme prise de rendez vous  --}}
               <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -134,7 +140,9 @@
               </div>
 
               {{-- fin pour fomr  --}}
-              <a href="#Sign-up"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
+              @if (Route::has('register'))
+              <a href="{{route('register')}}"><button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">connectez-vous</button></a>
+              @endif
             </div>
           </div>
         </div>

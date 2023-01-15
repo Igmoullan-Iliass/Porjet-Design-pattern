@@ -35,19 +35,35 @@ Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents'])
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/interface', function () {
     return view('interface');
 });
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
+// Route::get('/admin', function () {
+//     return view('admin.admin');
+// });
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// });
 Route::get('/siccurcalelist', function () {
     return view('siccurcale.siccurcalelist');
 });
 
+<<<<<<< Updated upstream
+=======
+Route::get('/home',[HomeController::class, 'redirect']);
+
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+>>>>>>> Stashed changes
 /*Route::get('/rdv', function () {
     return view('formeRendez');
 });
