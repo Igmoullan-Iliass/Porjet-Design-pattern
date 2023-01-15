@@ -101,7 +101,7 @@ var myBarChart = new Chart(ctxB, {
   data: {
     labels: ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","november","december"],
     datasets: [{
-      label: '# Mes clients',
+      label: 'Mes clients',
       data: [5,0,0,0,0,0,0,0,0,0,0,0],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',

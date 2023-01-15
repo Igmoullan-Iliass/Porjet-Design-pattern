@@ -1,6 +1,7 @@
 <nav  class="navbar navbar-expand-lg navbar-light bg-light " >
   <div class="container-fluid">
-    <span><img src="../../assets/images/logo.svg" alt="logo" /></span>
+    <span>          <h1 class="display-5 fw-bold text-dark shadow-blue " style=" font-family: 'Brush Script MT', cursive; font-size:25px; " >Rendez-vous</h1>
+</span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
