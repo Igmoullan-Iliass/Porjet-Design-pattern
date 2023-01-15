@@ -6,7 +6,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ url('register') }}">
+        <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <div>
@@ -47,7 +47,7 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ url('login') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
