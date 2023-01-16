@@ -34,7 +34,7 @@
                     <a href="{{route('admindashboard')}}"><i class="bi bi-graph-down"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{route('tech')}}"><i class="bi bi-person-badge-fill"></i> les techniciens</a>
+                    <a href="{{url('tech')}}"><i class="bi bi-person-badge-fill"></i> les techniciens</a>
                 </li>
                 <li>
                     <a href="{{route('siccurcalelist')}}"><i class="bi bi-geo-alt-fill"></i> succursales</a>
