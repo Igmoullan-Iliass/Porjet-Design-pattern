@@ -16,9 +16,14 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <div class="card bg-primary text-white h-100">
-              <div class="card-body py-5 fs-2">1</div>
+              <div class="card-body py-5 fs-2">
+              <?php
+              $nbrTechn = DB::table('Techniciens')->count();
+                echo  $nbrTechn;
+                ?>
+              </div>
               <div class="card-footer d-flex ">
-              <a href="{{route('techniciens')}}">techniciens</a>
+              <a href="{{url('tech')}}">techniciens</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -38,7 +43,12 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card bg-success text-white h-100">
-              <div class="card-body py-5 fs-2">2</div>
+              <div class="card-body py-5 fs-2">
+              <?php
+              $nbrrv = DB::table('Rendv')->count();
+                echo  $nbrrv;
+                ?>
+              </div>
               <div class="card-footer d-flex">
               <a href="{{url('rv')}}">rendez vous</a>
                 <span class="ms-auto">
@@ -49,7 +59,12 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card bg-danger text-white h-70">
-              <div class="card-body py-5 fs-2">2</div>
+              <div class="card-body py-5 fs-2">
+              <?php
+              $nbrUsers = DB::table('Users')->count();
+                echo  $nbrUsers;
+                ?>
+              </div>
               <div class="card-footer d-flex">
                 clients
                 <span class="ms-auto">
