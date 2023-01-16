@@ -31,23 +31,22 @@
   
                 </li>
                 <li>
-                    <a href="{{route('responsabledashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+                    <a href="{{route('responsabledashboard')}}"><i class="bi bi-graph-down"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{route('responsabletechniciens')}}">les techniciens</a>
+                    <a href="{{route('responsabletechniciens')}}"><i class="bi bi-person-badge-fill"></i> les techniciens</a>
                 </li>
                 <li>
-                    <a href="{{route('responsablesiccurcalelist')}}">succursales</a>
+                    <a href="{{route('responsablesiccurcalelist')}}"><i class="bi bi-geo-alt-fill"></i> succursales</a>
                 </li>
                 <li>
-                    <a href="#">clients</a>
+                    <a href="#"><i class="bi bi-file-earmark-person"></i> clients</a>
                 </li>
                 <li>
-                    <a href="{{url('rv')}}">les rendez vous</a>
+                    <a href="{{url('rv')}}"><i class="bi bi-ui-checks-grid"></i> les rendez vous</a>
                 </li>
                 <li>
-                    <a href="#addEmployeeModal">logout</a>
-                    <a href="#">logout</a>
+                    <a href="#addEmployeeModal"><i class="bi bi-box-arrow-up-left"></i> logout</a>
                 </li>
               
             </ul>

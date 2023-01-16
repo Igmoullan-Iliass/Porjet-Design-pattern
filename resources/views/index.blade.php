@@ -1,7 +1,7 @@
 
 
-@extends('admin.admin')
-@section('content')
+@extends('responsable.responsable')
+@section('content2')
 <!DOCTYPE html>
 <html lang="en">
 <head>
