@@ -52,9 +52,16 @@ Route::get('/siccurcalelist', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('home');
 })->name('home');
-
+//RendezVous
 Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
 Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
 Route::get('rv/{id}/edit', [App\Http\Controllers\RendezController::class, 'edit']);
 Route::put('rv/{id}', [App\Http\Controllers\RendezController::class, 'update']);
 Route::delete('rv/{id}', [App\Http\Controllers\RendezController::class, 'destroy']);
+//Techniciens
+Route::get('tech/create', [App\Http\Controllers\TechController::class, 'create']);
+Route::get('tech', [App\Http\Controllers\TechController::class, 'index']);
+Route::post('tech',[App\Http\Controllers\TechController::class, 'store']);
+Route::get('tech/{id}/edittech', [App\Http\Controllers\TechController::class, 'edit']);
+Route::put('tech/{id}', [App\Http\Controllers\TechController::class, 'update']);
+Route::delete('tech/{id}', [App\Http\Controllers\TechController::class, 'destroy']);

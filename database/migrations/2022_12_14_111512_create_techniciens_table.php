@@ -17,9 +17,9 @@ class CreateTechniciensTable extends Migration
             $table->id();
             $table->string('username');
             $table->string('email');
-            $table->boolean('dispo');
-            $table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('id_service')->constrained('service')->onDelete('cascade')->onUpdate('cascade');
+            //$table->boolean('dispo');
+            //$table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
+            //$table->foreignId('id_service')->constrained('service')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
