@@ -37,7 +37,7 @@
                     <a href="{{url('tech')}}"><i class="bi bi-person-badge-fill"></i> les techniciens</a>
                 </li>
                 <li>
-                    <a href="{{route('siccurcalelist')}}"><i class="bi bi-geo-alt-fill"></i> succursales</a>
+                    <a href="{{url('succ')}}"><i class="bi bi-geo-alt-fill"></i> succursales</a>
                 </li>
                 <li>
                     <a href="#"><i class="bi bi-file-earmark-person"></i> clients</a>

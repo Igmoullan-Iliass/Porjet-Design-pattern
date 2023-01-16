@@ -37,7 +37,7 @@
                     <a href="{{route('responsabletechniciens')}}">les techniciens</a>
                 </li>
                 <li>
-                    <a href="{{route('responsablesiccurcalelist')}}">succursales</a>
+                    <a href="{{route('succ')}}">succursales</a>
                 </li>
                 <li>
                     <a href="#">clients</a>

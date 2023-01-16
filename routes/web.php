@@ -87,3 +87,10 @@ Route::post('tech',[App\Http\Controllers\TechController::class, 'store']);
 Route::get('tech/{id}/edittech', [App\Http\Controllers\TechController::class, 'edit']);
 Route::put('tech/{id}', [App\Http\Controllers\TechController::class, 'update']);
 Route::delete('tech/{id}', [App\Http\Controllers\TechController::class, 'destroy']);
+//succurcales
+Route::get('succ/create', [App\Http\Controllers\SuccurcaleController::class, 'create']);
+Route::get('succ', [App\Http\Controllers\SuccurcaleController::class, 'index']);
+Route::post('succ',[App\Http\Controllers\SuccurcaleController::class, 'store']);
+Route::get('succ/{id}/editsucc', [App\Http\Controllers\SuccurcaleController::class, 'edit']);
+Route::put('succ/{id}', [App\Http\Controllers\SuccurcaleController::class, 'update']);
+Route::delete('succ/{id}', [App\Http\Controllers\SuccurcaleController::class, 'destroy']);

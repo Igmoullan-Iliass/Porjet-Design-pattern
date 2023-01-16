@@ -30,10 +30,10 @@
 				<div class="table-title">
 					<div class="row">
 						<div class="col-xs-6">
-							<h2> <b>Techniciens</b></h2>
+							<h2> <b>Succurcales</b></h2>
 						</div>
 						<div class="pull-right">
-            <a href="{{url('/succ/create')}}" class="btn btn-primary">Nouveau Techniciens</a>
+            <a href="{{url('/succ/create')}}" class="btn btn-primary">Nouveau Succurcale</a>
            </div>
 						<div class="col-xs-6">
 						</div>
@@ -48,11 +48,9 @@
 									<label for="selectAll"></label>
 								</span>
 							</th>
-							<th>Nom</th>
-                            <th>Ville</th>
-							<th>Région</th>
-                
-                    
+							<th>nom</th>
+                    <th>region</th>
+                    <th>ville</th>
                     
                     <th>Action</th>
 						</tr>
@@ -70,16 +68,15 @@
 							</td>
                             
                             <td>{{$succ->nom}}</td>
+                    <td>{{$succ->region}}</td>
                     <td>{{$succ->ville}}</td>
-					<td>{{$succ->region}}</td>
-                    
                 
                     <td>
 								
-                                <form action="" method="post">
+                                <form action="{{url('succ/'.$succ->id)}}" method="post">
                             {{csrf_field()}}
-                           
-                            <a href=""class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            {{method_field('DELETE')}}
+                            <a href="{{url('succ/'.$succ->id.'/editsucc')}}"class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <button type="submit" class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
                         </form>
                             </td>
