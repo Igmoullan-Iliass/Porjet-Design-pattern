@@ -1,3 +1,5 @@
+@extends('admin.admin')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +16,14 @@
     <title>Form </title>
     <style>
       .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
-
+      
+    
     </style>
 
 </head>
 
 <body>
+  <div >
 
 @if(count($errors))
                     <div class="alert alert-danger" role="alert">
@@ -30,7 +34,7 @@
               </ul>
 </div>
 @endif
-                  <div class="modal-body">
+                  <div class="modal-body bg-dark col-md-8 ms-auto">
                         <form class="row g-3 rounded-pill" action="{{url('rv/'.$rv->id)}}" method="POST">
                             <input type="hidden" name="_method" value="PUT">
                         {{csrf_field()}}    
@@ -59,19 +63,30 @@
                               </div>
 
                             <div class="col-sm-4">
-                              <label  class="form-label">Event Start</label>
-                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{$rv->event_start}}" value="{{old('event_start')}}">
+                              <label  class="form-label">date de rendez vous </label>
+                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{$rv->daterv}}" value="{{old('daterv')}}">
                             </div>
 
-                           <!-- <div class="col-sm-4">
-                                <label class="form-label">Event End</label>
-                                <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{$rv->event_end}}" value="{{old('event_end')}}">
-                              </div>-->
-                              <input type="submit" class="btn btn-danger" value="Modifier">
+                            <div class="col-sm-4">
+                                <label class="form-label">temps</label>
+                                <select name="time" class="form-select rounded-pill" value="{{old('time')}}">
+                                  <option selected>Choose...</option>
+                                  <option>09:00</option>
+                                  <option>09:15</option>
+                                  <option>09:30</option>
+                                  <option>09:45</option>
+                                  <option>10:00</option>
+                                  <option>10:15</option>
+                                  <option>10:30</option>
+                                </select>
+                              </div>
+                              <input type="submit" class="btn btn-primary ms-auto w-25" value="Modifier">
                           </form>
+                    </div>
                     </div>
       
 
 
 </body>
 </html>
+@endsection

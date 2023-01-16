@@ -29,6 +29,27 @@ Route::get('/techniciens',[StaticController::class,'techniciens'])->name('techni
 Route::get('/technicienne/calendar', [CalendarController::class, 'index'])->name('technicienne.calendar');;
 Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents']);
 
+
+
+Route::get('/test',[StaticController::class,'master'])->name('master');
+Route::get('/contact',[StaticController::class,'contact'])->name('contact');
+
+Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
+Route::get('/responsable/accueil',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
+
+Route::get('/admin/admindashboard',[StaticController::class,'admindashboard'])->name('admindashboard');
+Route::get('/responsable/responsabledashboard',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
+
+Route::get('/admin/siccurcalelist',[StaticController::class,'siccurcalelist'])->name('siccurcalelist');
+Route::get('/responsable/siccurcalelist',[StaticController::class,'responsablesiccurcalelist'])->name('responsablesiccurcalelist');
+
+Route::get('/admin/techniciens',[StaticController::class,'techniciens'])->name('techniciens');
+Route::get('/responsable/techniciens',[StaticController::class,'responsabletechniciens'])->name('responsabletechniciens');
+
+Route::get('/admin/rendezvous',[StaticController::class,'adminrendezvous'])->name('adminrendezvous');
+Route::get('/responsable/rendezvous',[StaticController::class,'responsablerendezvous'])->name('responsablerendezvous');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -47,6 +68,7 @@ Route::get('/admin', function () {
 Route::get('/siccurcalelist', function () {
     return view('siccurcale.siccurcalelist');
 });
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {

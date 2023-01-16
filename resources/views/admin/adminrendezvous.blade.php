@@ -45,14 +45,15 @@
 									<label for="selectAll"></label>
 								</span>
 							</th>
-							<th>nom</th>
-							<th>adresse</th>
-							<th>admin</th>
-							<th>responsable</th>
+							<th>date</th>
+							<th>status</th>
+							<th>id_respo</th>
+							<th>id_client</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
+					@foreach($rvs as $rv)
 						<tr>
 							<td>
 								<span class="custom-checkbox">
@@ -68,6 +69,8 @@
 								<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 								<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 							</td>
+                        </tr>
+						@endforeach
 						
 					</tbody>
 				</table>

@@ -8,7 +8,6 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
    
         <!-- Styles -->
@@ -22,35 +21,38 @@
 
 <body>
 
-    <div id="wrapper" class="toggled ">
+    <div id="wrapper" class="toggled">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <span class="text-white">espace responsable <i class="bi bi-person-check text-white"></i></span>
-                        
-                    
+  
                 </li>
                 <li>
-                    <a href="{{route('dashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
+                    <a href="{{route('responsabledashboard')}}"><i class="bi bi-graph-up-arrow text-white"></i>Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{route('techniciens')}}">les techniciens</a>
+                    <a href="{{route('responsabletechniciens')}}">les techniciens</a>
                 </li>
                 <li>
-                    <a href="#">succursales</a>
+                    <a href="{{route('responsablesiccurcalelist')}}">succursales</a>
                 </li>
                 <li>
                     <a href="#">clients</a>
                 </li>
                 <li>
-                    <a href="#">les rendez vous</a>
+                    <a href="{{url('rv')}}">les rendez vous</a>
                 </li>
                 <li>
+<<<<<<<< HEAD:resources/views/responsable/responsablesidebar.blade.php
+                    <a href="#addEmployeeModal">logout</a>
+========
                     <a href="#">logout</a>
+>>>>>>>> main:resources/views/responsable/sidebar.blade.php
                 </li>
-                
+              
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -65,5 +67,4 @@
     <!-- Menu Toggle Script -->
     
 
-  
 </body>

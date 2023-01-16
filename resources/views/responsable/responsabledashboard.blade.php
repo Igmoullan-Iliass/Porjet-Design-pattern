@@ -1,5 +1,5 @@
-@extends('admin.admin')
-@section('content')
+@extends('responsable.responsable')
+@section('content2')
     <!-- top navigation bar -->
     
     <!-- top navigation bar -->
@@ -18,7 +18,7 @@
             <div class="card bg-primary text-white h-100">
               <div class="card-body py-5 fs-2">1</div>
               <div class="card-footer d-flex ">
-              <a href="{{route('techniciens')}}">techniciens</a>
+              <a href="{{route('responsabletechniciens')}}">techniciens</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -29,7 +29,7 @@
             <div class="card bg-warning text-dark h-100">
               <div class="card-body py-5 fs-2">1</div>
               <div class="card-footer d-flex">
-              <a href="{{route('siccurcalelist')}}">siccurcales</a>
+              <a href="{{route('responsablesiccurcalelist')}}"> siccurcales</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -40,7 +40,7 @@
             <div class="card bg-success text-white h-100">
               <div class="card-body py-5 fs-2">2</div>
               <div class="card-footer d-flex">
-              <a href="{{url('rv')}}">rendez vous</a>
+                rendez vous
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>

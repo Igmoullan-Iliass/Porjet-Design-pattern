@@ -1,5 +1,5 @@
-@extends('admin.admin')
-@section('content')
+@extends('responsable.responsable')
+@section('content2')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,10 +45,10 @@
 									<label for="selectAll"></label>
 								</span>
 							</th>
-							<th>nom</th>
-							<th>adresse</th>
-							<th>admin</th>
-							<th>responsable</th>
+							<th>date</th>
+							<th>status</th>
+							<th>id_respo</th>
+							<th>id_client</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
