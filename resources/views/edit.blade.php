@@ -34,7 +34,7 @@
               </ul>
 </div>
 @endif
-                  <div class="modal-body bg-dark col-md-8 ms-auto">
+                  <div class="modal-body bg-light col-md-8 ms-auto">
                         <form class="row g-3 rounded-pill" action="{{url('rv/'.$rv->id)}}" method="POST">
                             <input type="hidden" name="_method" value="PUT">
                         {{csrf_field()}}    
@@ -63,25 +63,17 @@
                               </div>
 
                             <div class="col-sm-4">
-                              <label  class="form-label">date de rendez vous </label>
-                              <input type="date" class="form-control rounded-pill" name="daterv" value="{{$rv->daterv}}" value="{{old('daterv')}}">
+                              <label  class="form-label">event_start </label>
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{$rv->event_start}}" value="{{$rv->event_start}}">
+                            </div>
+                            <div class="col-sm-4">
+                              <label  class="form-label">event_end </label>
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{$rv->event_end}}" value="{{$rv->event_end}}">
                             </div>
 
-                            <div class="col-sm-4">
-                                <label class="form-label">temps</label>
-                                <select name="time" class="form-select rounded-pill" value="{{old('time')}}">
-                                  <option selected>Choose...</option>
-                                  <option>09:00</option>
-                                  <option>09:15</option>
-                                  <option>09:30</option>
-                                  <option>09:45</option>
-                                  <option>10:00</option>
-                                  <option>10:15</option>
-                                  <option>10:30</option>
-                                </select>
-                              </div>
+<div>
                               <input type="submit" class="btn btn-primary ms-auto w-25" value="Modifier">
-                          </form>
+                              </div></form>
                     </div>
                     </div>
       

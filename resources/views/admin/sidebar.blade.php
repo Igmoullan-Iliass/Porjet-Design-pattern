@@ -45,8 +45,15 @@
                 <li>
                     <a href="{{url('rv')}}"><i class="bi bi-ui-checks-grid"></i> les rendez vous</a>
                 </li>
-                <li>
-                    <a href="#addEmployeeModal"><i class="bi bi-box-arrow-up-left"></i> logout</a>
+                <li><form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
                 </li>
               
             </ul>
