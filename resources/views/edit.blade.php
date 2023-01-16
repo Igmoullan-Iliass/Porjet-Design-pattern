@@ -63,8 +63,12 @@
                               </div>
 
                             <div class="col-sm-4">
-                              <label  class="form-label">date de rendez vous </label>
-                              <input type="datetime-local" class="form-control rounded-pill" name="daterv" value="{{$rv->event_start}}" value="{{$rv->event_start}}">
+                              <label  class="form-label">event_start </label>
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_start" value="{{$rv->event_start}}" value="{{$rv->event_start}}">
+                            </div>
+                            <div class="col-sm-4">
+                              <label  class="form-label">event_end </label>
+                              <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{$rv->event_end}}" value="{{$rv->event_end}}">
                             </div>
 
 <div>
