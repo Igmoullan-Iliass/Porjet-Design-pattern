@@ -1,3 +1,5 @@
+@extends('admin.admin')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +16,14 @@
     <title>Form </title>
     <style>
       .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
-
+      
+    
     </style>
 
 </head>
 
 <body>
+  <div >
 
 @if(count($errors))
                     <div class="alert alert-danger" role="alert">
@@ -30,26 +34,30 @@
               </ul>
 </div>
 @endif
-                  <div class="modal-body">
+                  <div class="modal-body bg-light col-md-8 ms-auto">
                         <form class="row g-3 rounded-pill" action="{{url('tech/'.$tech->id)}}" method="POST">
-                          <input type="hidden" name="_method" value="PUT">
-                {{csrf_field()}}    
-                        <div class="col-sm-4">
+                            <input type="hidden" name="_method" value="PUT">
+                        {{csrf_field()}}    
+                        <div class="col-sm-13">
                                 <label  class="form-label">username</label>
-                                <input type="text" class="form-control rounded-pill" name="username" value="{{$tech->username}}">
+                                <input type="text" class="form-control" name="username" value="{{$tech->username}}">
                               </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-13">
                               <label  class="form-label">Email</label>
-                              <input type="email" class="form-control rounded-pill" name="email" value="{{$tech->email}}">
+                              <input type="email" class="form-control" name="email" value="{{$tech->email}}">
                             </div>
 
 
-                            
-                              <input type="submit" class="btn btn-danger" value="Modifier">
-                          </form>
+                           
+
+<div>
+                              <input type="submit" class="btn btn-primary ms-auto w-25" value="Modifier">
+                              </div></form>
+                    </div>
                     </div>
       
 
 
 </body>
 </html>
+@endsection
