@@ -132,19 +132,19 @@
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>Name</label>
+							<label>nom</label>
 							<input type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Email</label>
+							<label>adress</label>
 							<input type="email" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Address</label>
+							<label>admin</label>
 							<textarea class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
-							<label>Phone</label>
+							<label>responsable</label>
 							<input type="text" class="form-control" required>
 						</div>					
 					</div>
