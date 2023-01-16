@@ -18,6 +18,7 @@
     <style>
       .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
 
+        <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->

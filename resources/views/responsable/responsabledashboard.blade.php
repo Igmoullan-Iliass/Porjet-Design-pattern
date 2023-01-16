@@ -18,7 +18,7 @@
             <div class="card bg-primary text-white h-100">
               <div class="card-body py-5 fs-2">1</div>
               <div class="card-footer d-flex ">
-                techniciens
+              <a href="{{route('responsabletechniciens')}}">techniciens</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
@@ -27,9 +27,9 @@
           </div>
           <div class="col-md-3 mb-3">
             <div class="card bg-warning text-dark h-100">
-              <div class="card-body py-5 fs-2">0</div>
+              <div class="card-body py-5 fs-2">1</div>
               <div class="card-footer d-flex">
-                siccurcales
+              <a href="{{route('responsablesiccurcalelist')}}"> siccurcales</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
