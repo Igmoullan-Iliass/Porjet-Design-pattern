@@ -113,18 +113,6 @@
                               <input type="datetime-local" class="cd form-control rounded-pill" name="event_start" value="{{old('event_start')}}">
                             </div>
 
-                             <!--<div class="col-sm-4">
-                                <label class="form-label">Event End</label>
-                               <select name="event_end" class="form-select rounded-pill" value="{{old('event_end')}}">
-                                  <option selected>Choose...</option>
-                                  <option>09:00</option>
-                                  <option>09:15</option>
-                                  <option>09:30</option>
-                                  <option>09:45</option>
-                                  <option>10:00</option>
-                                  <option>10:15</option>
-                                  <option>10:30</option>
-                                </select>
 
                               <input type="datetime-local" class="form-control rounded-pill" name="event_end" value="{{old('event_end')}}">
                               </div>-->
@@ -133,8 +121,6 @@
                           </form>
                     </div>
                     <div class="modal-footer col-md-12 text-center ">
-                      {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-                      {{-- <button type="button" class="btn btn-primary rounded-pill  ">prendez rendez vous </button> --}}
                     </div>
                   </div>
                 </div>
