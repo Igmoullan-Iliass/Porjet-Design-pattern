@@ -46,11 +46,15 @@
                     <a href="{{url('rv')}}">les rendez vous</a>
                 </li>
                 <li>
-<<<<<<<< HEAD:resources/views/responsable/responsablesidebar.blade.php
-                    <a href="#addEmployeeModal">logout</a>
-========
-                    <a href="#">logout</a>
->>>>>>>> main:resources/views/responsable/sidebar.blade.php
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
                 </li>
               
             </ul>

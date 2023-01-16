@@ -22,8 +22,18 @@
         <li class="nav-item">
           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-person-fill"></i> profile</a>
         </li>
-        
-      </ul>
+        </ul>
+        <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-jet-responsive-nav-link>
+                </form>
+                
+      
    
     </div>
   </div>
