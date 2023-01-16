@@ -29,7 +29,7 @@
             <div class="card bg-warning text-dark h-100">
               <div class="card-body py-5 fs-2">1</div>
               <div class="card-footer d-flex">
-              <a href="{{route('responsablesiccurcalelist')}}"> siccurcales</a>
+              <a href="{{route('responsablesiccurcalelist')}}"> succurcales</a>
                 <span class="ms-auto">
                   <i class="bi bi-chevron-right"></i>
                 </span>
