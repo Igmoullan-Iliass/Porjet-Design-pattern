@@ -34,6 +34,9 @@ Route::post('calendar-crud-ajax', [CalendarController::class, 'calendarEvents'])
 Route::get('/test',[StaticController::class,'master'])->name('master');
 Route::get('/contact',[StaticController::class,'contact'])->name('contact');
 
+
+
+
 Route::get('/admin/accueil',[StaticController::class,'admindashboard'])->name('admin');
 Route::get('/responsable/accueil',[StaticController::class,'responsabledashboard'])->name('responsabledashboard');
 
@@ -74,6 +77,7 @@ Route::get('/siccurcalelist', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/home', function () {
     return view('home');
 })->name('home');
+
 //RendezVous
 Route::post('rv',[App\Http\Controllers\RendezController::class, 'store']);
 Route::get('rv', [App\Http\Controllers\RendezController::class, 'index']);
