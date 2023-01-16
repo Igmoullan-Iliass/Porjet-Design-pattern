@@ -16,9 +16,10 @@ class CreateSuccurcalesTable extends Migration
         Schema::create('succurcales', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->string('adresse');
-            $table->foreignId('id_admin')->constrained('admin')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('region');
+            $table->string('ville');
+            // $table->foreignId('id_admin')->constrained('admin')->onDelete('cascade')->onUpdate('cascade');
+            // $table->foreignId('id_resp')->constrained('responsable')->onDelete('cascade')->onUpdate('cascade');
             
             $table->timestamps();
         });
