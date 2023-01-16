@@ -1,68 +1,100 @@
+
+
+@extends('responsable.responsable')
+@section('content2')
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    {{-- <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
-    {{-- <link rel="{{asset(css/css/bootstrap.min.css)}}"  rel="stylesheet"> --}}
-    {{-- {!! HTML::style('css/css/') !!} --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <title>Gestion Rv </title>
-    <style>
-      .shadow-blue { text-shadow: 2px 2px 5px rgb(40, 40, 199);}
-
-    </style>
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<link rel="stylesheet" href="/css/siccurcalestyle.css">
+<script type="text/javascript" src="/js/siccurcalejs.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    .container{
+        margin-left: 200px;
+    }
+</style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                @if(session()->has('success'))
-                <div class="alert alert-success">
-           {{session()->get('success')}}
-                </div>
-                @endif
-           <h1>Liste des Techniciens</h1>
-           <div class="pull-right">
-            <a href="{{url('/home')}}" class="btn btn-primary">Nouveau Techniciens</a>
+		<div class="table-responsive">
+			<div class="table-wrapper">
+				<div class="table-title">
+					<div class="row">
+						<div class="col-xs-6">
+							<h2> <b>Techniciens</b></h2>
+						</div>
+						<div class="pull-right">
+            <a href="{{url('/tech/create')}}" class="btn btn-primary">Nouveau Techniciens</a>
            </div>
-            <table class="table table-dark table-striped">
-                <tr>
-                <th>Username</th>
+						<div class="col-xs-6">
+						</div>
+					</div>
+				</div>
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>
+								<span class="custom-checkbox">
+									<input type="checkbox" id="selectAll">
+									<label for="selectAll"></label>
+								</span>
+							</th>
+							<th>Username</th>
                     <th>Email</th>
                     
                     
                     <th>Action</th>
-                </tr>
-                @foreach($techs as $tech)
+						</tr>
+					</thead>
+					<tbody>
+					
+						
+                    @foreach($techs as $tech)
                 <tr>
-                <td>{{$tech->username}}</td>
+                <td>
+								<span class="custom-checkbox">
+									<input type="checkbox" id="checkbox1" name="options[]" value="1">
+									<label for="checkbox1"></label>
+								</span>
+							</td>
+                            
+                            <td>{{$tech->username}}</td>
                     <td>{{$tech->email}}</td>
                     
-                    
+                
                     <td>
-                        <!--<a href="" class="btn btn-primary">Details</a>-->
-                        
-                        <form action="{{url('tech/'.$tech->id)}}" method="post">
+								
+                                <form action="{{url('tech/'.$tech->id)}}" method="post">
                             {{csrf_field()}}
                             {{method_field('DELETE')}}
-                            <a href="{{url('tech/'.$tech->id.'/edittech')}}"class="btn btn-secondary">Editer</a>
-                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                            <a href="{{url('tech/'.$tech->id.'/edittech')}}"class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <button type="submit" class="btn w-25"><i class="material-icons w-25" data-toggle="tooltip" title="Delete">&#xE872;</i></button>
                         </form>
-                        
-                        
-                    </td>
+                            </td>
                 
                 </tr>
                 @endforeach
-            </table>
-            </div>
-        </div>
+						
+					</tbody>
+				</table>
+				
+			</div>
+		</div>        
     </div>
+	<!-- Edit Modal HTML -->
+	
+
 </body>
 </html>
+@endsection
+
+

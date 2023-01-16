@@ -3,4 +3,8 @@
     
     <!-- top navigation bar -->
     <!-- offcanvas -->
-<div>hgghghhhffffffffffffffffffffffffffffffffffffffffffff</div>@endsection
+<div>
+    
+</div>
+
+@endsection
